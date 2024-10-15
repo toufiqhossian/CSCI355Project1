@@ -1,25 +1,60 @@
-<!--This will be the home page-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yet To Decide</title>
-  <link rel="stylesheet" href="HomeStyle.css">
-  </head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queens Capital</title>
+    <link rel="stylesheet" href="HomeStyle.css">
+</head>
 <body>
-    <nav id="topNav">
-        <div id="navLinks" class="hidden">
-          <a href="Home.html"><b>Home</b></a>
-          <a href="Use the Html link"><b>NULL</b></a>
-          <a href="Use the Html link"><b>NULL</b></a>
-          <a href="USe the Html link"><b>NULL</b></a>
+    <!-- Mouse-following blue circle -->
+    <div class="mouse-circle"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="path_to_your_logo.png" alt="Queens Capital">
         </div>
-      </nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Financial Products</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+        <a href="#apply" class="apply-btn">Apply Now</a>
+    </nav>
 
+    <!-- Main Content -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Unlock Financial Growth with <span>Queens Capital (QC)</span></h1>
+                <p>We are the leading provider of business financing solutions tailored to fuel the success of businesses like yours.</p>
+                <div class="header-buttons">
+                    <button class="get-started-btn">Get Started</button>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <div class="trustpilot">
+                    <span>Certified by</span> <img src="path_to_trustpilot_logo.png" alt="Trustpilot">
+                </div>
+            </div>
 
-    <footer>
-    
-    </footer>
-    <script src="HomeScript.js"></script>
+            <!-- Loan Slider -->
+            <div class="loan-calculator">
+                <div class="loan-slider">
+                    <label for="loanAmount">Loan amount: $<span id="amountValue">50000</span></label>
+                    <input type="range" min="50000" max="500000" value="50000" class="slider" id="loanAmount">
+                </div>
+                <div class="loan-details">
+                    <label for="paybackPeriod">Payback period (in months):</label>
+                    <input type="number" id="paybackPeriod" placeholder="Enter number of months">
+                    <input type="email" id="email" placeholder="Your Email">
+                    <button class="apply-now-btn">Apply now</button>
+                    <p>⚡ Instant processing time</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
 </body>
 </html>

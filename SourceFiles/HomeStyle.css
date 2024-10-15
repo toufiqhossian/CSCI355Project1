@@ -1,29 +1,201 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
+/* General Styles */
 body {
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f9fafb;
+  overflow-x: hidden; /* Prevent horizontal scroll issues */
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #333;
+}
+
+span {
+  color: #007bff; /* QC's Blue Color */
+}
+
+p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.apply-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 10%;
+  background-color: #ffffff;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 40px; /* Space between text and calculator */
+}
+
+.header-text {
+  max-width: 50%;
+}
+
+.header-buttons {
+  margin-top: 30px;
+}
+
+.get-started-btn, .learn-more-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.get-started-btn {
+  background-color: black;
+  color: white;
+}
+
+.learn-more-btn {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.trustpilot {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Loan Slider Section */
+.loan-calculator {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.loan-slider {
+  margin-bottom: 20px;
+}
+
+.loan-slider input[type="range"] {
+  width: 100%;
+}
+
+.loan-slider label {
+  font-size: 1.1em;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.loan-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loan-details input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
+.apply-now-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%; /* Ensures button fills container */
+}
+
+.apply-now-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Mouse-following blue circle */
+.mouse-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      align-items: center;
   }
 
-#topNav {
-    display: flex;
-    align-items: center;
-    background: rgb(0, 0, 0);
-    padding: 10px;
-    width: 100%;
-  
+  .header-text, .loan-calculator {
+      max-width: 100%;
+      margin: 20px 0;
   }
-  
-  #topNav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    margin-left: 5px;
-  
+
+  .apply-btn {
+      margin-top: 10px;
   }
-  
-  #topNav a:hover {
-    color: rgb(114, 114, 114);
-    transition: ease-in 0.2s, ease-out 0.2s;
-  }
+}
