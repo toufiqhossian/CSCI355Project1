@@ -171,17 +171,19 @@ p {
   background-color: #0056b3;
 }
 
-/* Mouse-following blue circle */
+
+/* Mouse-following blue ring */
 .mouse-circle {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #007bff;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #007bff; /* Creates a blue ring effect */
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 10000;
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -199,3 +201,8 @@ p {
       margin-top: 10px;
   }
 }
+
+
+
+
+
