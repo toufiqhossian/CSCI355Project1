@@ -101,24 +101,6 @@ body {
     transform: rotate(765deg) translateY(-5.5px);
   }
 
-  header {
-    color: rgb(111, 221, 255);
-    font-size: 500%;
-    margin: 0;
-    padding: 20px;
-    height: auto;
-    text-align: center;
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-  }
-  
-  header p {
-    color: rgb(255, 255, 255);
-    font-size: 23%;
-  }
-
-
-
 
   footer {
     display: flex;
@@ -131,4 +113,3 @@ body {
     padding: 20px;
     height: auto;
   }
-  
