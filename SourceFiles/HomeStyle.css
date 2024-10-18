@@ -274,3 +274,59 @@ footer .social-media a:hover {
     text-align: center; /* Centers the footer text horizontally. */
   }
 }
+
+
+/* Cart Count Badge */
+.cart-count {
+  background-color: #ff4b5c; /* Red background for the cart count badge */
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  position: relative;
+  top: -15px;
+  left: -10px;
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+
+/* Add to Cart button */
+.add-to-cart-btn {
+  background-color: #5290f9;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #001f3f;
+  transform: scale(1.05);
+}
+
+/* Quantity button hover effects */
+.buttons i:hover {
+  color: #5290f9;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Add smooth transitions */
+.quantity {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.quantity.updated {
+  background-color: #ffdd57;
+  transform: scale(1.2);
+}
