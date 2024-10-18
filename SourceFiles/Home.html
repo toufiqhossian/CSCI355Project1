@@ -2,43 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EGGTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGGTech - Elevating Your Tech</title>
+
+  <!-- External CSS -->
+  <!-- This line links to your external CSS file called "HomeStyle.css" where all the styling is handled. -->
   <link rel="stylesheet" href="HomeStyle.css">
-  </head>
+
+  <!-- Bootstrap Icons -->
+  <!-- This line imports icons from Bootstrap (a popular framework for web development). The icons will be used in the design, such as the cart icon. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
 
 <body>
-  <div class="head">
-    <nav id="nav">
-        <ul>
-          <li><a href="Home.html"><b>Home</b></a></li>
-          <li><a href="sale.html"><b>Sale</b></a></li>
-          <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-          <li><a href="cart.html"><b>Your Cart</b></a></li>
+  <!-- Header Section -->
+  <!-- This is the header of the website, where navigation links (Home, Sale, Contact Us, Cart) are placed. -->
+  <header>
+    <div class="container">
+      <nav id="nav" aria-label="Main Navigation">
+        <!-- The 'nav-links' unordered list contains all the links to other pages on your site -->
+        <ul class="nav-links">
+          <li><a href="Home.html"><b>Home</b></a></li> <!-- 'Home' link goes to the homepage -->
+          <li><a href="sale.html"><b>Sale</b></a></li> <!-- 'Sale' link goes to the sale page -->
+          <li><a href="contact-us.html"><b>Contact Us</b></a></li> <!-- 'Contact Us' link goes to the contact page -->
+          <li><a href="cart.html"><b>Your Cart</b></a> <!-- 'Cart' link goes to the shopping cart page -->
+            <i class="bi bi-cart4" aria-label="Cart Icon"></i> <!-- This is the cart icon from Bootstrap Icons library -->
+          </li>
         </ul>
-        <button class="icon" id="toggle">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
+
+        <!-- The button below is a "hamburger menu" icon used for mobile devices. When clicked, it will expand a mobile-friendly menu. -->
+        <button class="menu-toggle icon" id="toggle" aria-label="Menu Toggle">
+          <div class="line line1"></div> <!-- First line of the hamburger menu -->
+          <div class="line line2"></div> <!-- Second line of the hamburger menu -->
         </button>
       </nav>
-  </div>
-
-  <header>
-    <b>EGGTech</b>
+    </div>
   </header>
 
-  
+  <!-- Hero Section -->
+  <!-- The hero section is the large banner at the top of the webpage that usually contains an introduction and a call-to-action (CTA) button. -->
+  <main class="hero">
+    <div class="hero-content">
+      <!-- This is the main title on the hero section welcoming visitors -->
+      <h1>Welcome to EGGTech</h1>
+      <!-- This paragraph provides a short description of your website -->
+      <p>Discover cutting-edge tech at unbeatable prices, designed to elevate your digital life!</p>
+      <!-- Call-to-action button that leads to the Sale page -->
+      <a href="sale.html" class="cta-btn">Shop Now</a>
+    </div>
+  </main>
 
-    <footer>
-      <div>
-        <a href="">GET HELP</a><br>
-        <a href="">Help Center</a><br>
-        <a href="">Frequently Asked Questions</a><br>
-        <a href="">Order Statues</a><br>
-        <a href="">EGGTech Credit Card</a><br>
-        <a href="">Returns</a><br>
-        Owners : (Please put your names here, This will be at the footer of each page)<br>
+  <!-- Shop Section -->
+  <!-- This section contains the products that are displayed on the homepage. -->
+  <section class="shop" id="shop">
+    
+    <!-- First Product: Computer Keyboard -->
+    <div class="item">
+      <img src="/SourceFiles/CS355 Project images/pexels-olenkabohovyk-1772123.jpg" alt="keyboard">
+      <!-- Product image; the alt text is displayed if the image cannot load. -->
+      
+      <div class="details">
+        <h3>Computer Keyboard</h3> <!-- Product name -->
+        <p>Sleek, responsive, and designed for professionals.</p> <!-- Short description of the product -->
+        
+        <!-- Price and quantity control -->
+        <div class="price-quantity">
+          <h2>$45</h2> <!-- Price of the product -->
+          <div class="buttons">
+            <!-- Buttons to increase or decrease the product quantity -->
+            <i class="bi bi-dash-lg"></i> <!-- Dash icon for decreasing quantity -->
+            <div class="quantity">0</div> <!-- Display for the current quantity of the product -->
+            <i class="bi bi-plus-lg"></i> <!-- Plus icon for increasing quantity -->
+          </div>
+        </div>
       </div>
-    </footer>
-    <script src="HomeScript.js"></script>
+    </div>
+
+    <!-- Second Product: Nikon Camera -->
+    <div class="item">
+      <img src= "/SourceFiles/CS355 Project images/pexels-pixabay-51383.jpg" alt="nikon">
+      <!-- Product image of a Nikon camera -->
+      
+      <div class="details">
+        <h3>Nikon Camera</h3> <!-- Product name -->
+        <p>Powerful, precise, and crafted for professionals.</p> <!-- Short description of the product -->
+        
+        <!-- Price and quantity control -->
+        <div class="price-quantity">
+          <h2>$22</h2> <!-- Price of the product -->
+          <div class="buttons">
+            <i class="bi bi-dash-lg"></i> <!-- Dash icon for decreasing quantity -->
+            <div class="quantity">0</div> <!-- Display for the current quantity of the product -->
+            <i class="bi bi-plus-lg"></i> <!-- Plus icon for increasing quantity -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Product: Lightning Cable -->
+    <div class="item">
+      <img src="/SourceFiles/CS355 Project images/pexels-didsss-1643753.jpg" alt="lightning">
+      <!-- Product image of a Lightning cable -->
+      
+      <div class="details">
+        <h3>Lightning Cable</h3> <!-- Product name -->
+        <p>Compact, durable, and built for speed.</p> <!-- Short description of the product -->
+        
+        <!-- Price and quantity control -->
+        <div class="price-quantity">
+          <h2>$22</h2> <!-- Price of the product -->
+          <div class="buttons">
+            <i class="bi bi-dash-lg"></i> <!-- Dash icon for decreasing quantity -->
+            <div class="quantity">0</div> <!-- Display for the current quantity of the product -->
+            <i class="bi bi-plus-lg"></i> <!-- Plus icon for increasing quantity -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat the item block for other products as needed -->
+  </section>
+
+  <!-- Footer Section -->
+  <!-- The footer of the webpage. It provides links to important pages and contact information. -->
+  <footer>
+    <div class="footer-content">
+
+      <!-- First section: Get Help links -->
+      <section>
+        <h2>Get Help</h2>
+        <ul>
+          <li><a href="help-center.html">Help Center</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="order-status.html">Order Status</a></li>
+          <li><a href="credit-card.html">EGGTech Credit Card</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </section>
+
+      <!-- Second section: Contact Us information -->
+      <section>
+        <h2>Contact Us</h2>
+        <p>Email: support@eggtech.com</p> <!-- Contact email -->
+        <p>Phone: +1 (800) 555-1234</p> <!-- Contact phone number -->
+      </section>
+
+      <!-- Third section: Owners of the company -->
+      <section>
+        <h2>Owners</h2>
+        <p>Roni Mikhaylov</p> <!-- Owner name -->
+        <p>T</p> <!-- Placeholder for another owner -->
+        <p>Y</p> <!-- Placeholder for another owner -->
+      </section>
+
+      <!-- Fourth section: Social media links -->
+      <section class="social-media">
+        <h2>Follow Us</h2>
+        <a href="https://facebook.com" aria-label="Facebook">
+          <i class="bi bi-facebook"></i> <!-- Facebook icon -->
+        </a>
+        <a href="https://twitter.com" aria-label="Twitter">
+          <i class="bi bi-twitter"></i> <!-- Twitter icon -->
+        </a>
+        <a href="https://instagram.com" aria-label="Instagram">
+          <i class="bi bi-instagram"></i> <!-- Instagram icon -->
+        </a>
+      </section>
+
+    </div>
+  </footer>
+
+  <!-- External JS -->
+  <!-- This script links to "HomeScript.js" which handles any interactive functionality such as the navigation toggle. -->
+  <script src="HomeScript.js"></script>
 </body>
 </html>

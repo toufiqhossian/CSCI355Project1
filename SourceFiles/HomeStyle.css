@@ -1,134 +1,276 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); 
+/* This line imports the 'Poppins' font family from Google Fonts. 
+   It will be used throughout the website to give it a modern and clean look. */
 
-*{
-   box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+/* 
+  box-sizing: border-box makes sure that padding and borders are included in the element's width and height.
+  margin: 0 and padding: 0 remove default spacing around elements, ensuring you have full control over how elements are spaced.
+*/
 
 body {
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
+  background-color: #f4f7f9; /* Sets the background color of the page to a light grayish blue. */
+  font-family: 'Poppins', sans-serif; /* Applies the 'Poppins' font to all text in the body. */
+  color: #333; /* Sets the text color to a dark gray. */
+  overflow-x: hidden; /* Prevents horizontal scrolling, keeping the layout neat. */
+}
+
+/* Navbar Styling */
+header {
+  background-color: #001f3f; /* Dark blue background color for the header section. */
+  padding: 10px 20px; /* Adds padding inside the header to space out the content. */
+}
+
+nav {
+  display: flex; /* Flexbox is used to align the navigation items. */
+  justify-content: space-between; /* Space is added between items in the navigation. */
+  align-items: center; /* Vertically centers the navigation items. */
+}
+
+.nav-links {
+  display: flex; /* Aligns the list items (links) in a row horizontally. */
+  list-style: none; /* Removes default bullet points from the list. */
+}
+
+.nav-links li {
+  margin: 0 15px; /* Adds space between each list item. */
+}
+
+.nav-links a {
+  color: #ffffff; /* Sets the link text color to white. */
+  font-size: 18px; /* Makes the text size 18px for better readability. */
+  text-decoration: none; /* Removes the underline from the links. */
+  transition: color 0.3s ease; /* Smoothly changes the color when hovered over. */
+}
+
+.nav-links a:hover {
+  color: #5290f9; /* Changes the link color to a lighter blue when hovered. */
+}
+
+.icon {
+  display: none; /* Initially hides the hamburger icon (used for mobile navigation). */
+  cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over the icon. */
+}
+
+.icon .line {
+  background-color: #ffffff; /* Sets the lines inside the icon to white. */
+  height: 2px; /* Makes the lines 2px thick. */
+  width: 20px; /* Sets the width of the lines to 20px. */
+  margin: 5px 0; /* Adds spacing between the lines. */
+}
+
+/* Hero Section Styling (The large banner at the top) */
+.hero {
+  background: linear-gradient(to right, #5290f9, #001f3f), 
+              url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg") 
+              no-repeat center center/cover;
+  /* 
+    The background is a combination of a gradient (from lighter blue to dark blue) 
+    and a background image. The image covers the entire section and is centered.
+  */
+  height: 100vh; /* The hero section takes up the full viewport height. */
+  display: flex; /* Flexbox is used to align items inside the hero section. */
+  align-items: center; /* Vertically centers the content inside the hero section. */
+  justify-content: center; /* Horizontally centers the content. */
+  color: #fff; /* Sets the text color inside the hero section to white. */
+  text-align: center; /* Centers the text horizontally. */
+  animation: fadeIn 1s ease-in; /* The section will fade into view when the page loads. */
+}
+
+.hero h1 {
+  font-size: 4rem; /* Makes the main heading text large (4 rem units). */
+  margin-bottom: 10px; /* Adds a small space below the heading. */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Adds a shadow behind the text to make it stand out. */
+}
+
+.hero p {
+  font-size: 1.5rem; /* Increases the font size of the paragraph text inside the hero section. */
+  margin-bottom: 20px; /* Adds space below the paragraph. */
+}
+
+.cta-btn {
+  background-color: #5290f9; /* Sets the button background color to a lighter blue. */
+  padding: 15px 30px; /* Adds padding inside the button (more space horizontally). */
+  color: #fff; /* Sets the button text color to white. */
+  text-transform: uppercase; /* Makes the button text all uppercase. */
+  border: none; /* Removes any borders from the button. */
+  border-radius: 5px; /* Rounds the button corners slightly (5px). */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations for button interactions. */
+}
+
+.cta-btn:hover {
+  transform: scale(1.05); /* Slightly increases the size of the button when hovered over. */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow behind the button when hovered. */
+  background-color: #001f3f; /* Changes the background color to dark blue when hovered. */
+}
+
+/* Shop Section (The grid of product items) */
+.shop {
+  display: grid; /* Uses CSS grid layout to arrange product items. */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  /* Automatically adjusts the number of columns based on available space.
+     Each item will be at least 280px wide, but will expand to fill available space. */
+  gap: 30px; /* Adds space between grid items. */
+  padding: 40px; /* Adds padding around the shop section. */
+  justify-items: center; /* Centers each grid item horizontally. */
+  background-color: #f9f9f9; /* Light gray background for the shop section. */
+}
+
+.item {
+  background-color: #fff; /* Sets the item background to white. */
+  border-radius: 10px; /* Slightly rounds the corners of each item. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow below each item. */
+  overflow: hidden; /* Prevents the content inside the item from overflowing its box. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations for hover effects. */
+  display: flex; /* Flexbox is used to structure content inside each item. */
+  flex-direction: column; /* Stacks content inside each item vertically. */
+  justify-content: space-between; /* Ensures the content is spaced evenly. */
+  max-width: 300px; /* Limits the maximum width of each item. */
+  height: 100%; /* Ensures all items have the same height. */
+  animation: slideUp 1s ease-in; /* Adds a sliding animation when items load. */
+}
+
+.item img {
+  width: 100%; /* Ensures the image inside the item takes up 100% of the item's width. */
+  height: 180px; /* Sets a fixed height for all images inside items. */
+  object-fit: cover; /* Ensures the image covers the entire area without stretching. */
+  transition: transform 0.4s ease; /* Smooth animation when the image is hovered over. */
+}
+
+.details {
+  padding: 20px; /* Adds padding around the details section. */
+  text-align: center; /* Centers the text inside the details section. */
+  flex-grow: 1; /* Makes this section take up available vertical space. */
+}
+
+.price-quantity {
+  display: flex; /* Flexbox is used to align price and quantity controls. */
+  justify-content: space-between; /* Spaces the price and buttons evenly. */
+  align-items: center; /* Vertically centers the content. */
+  margin-top: 10px; /* Adds a small space above the price/quantity section. */
+}
+
+.price-quantity h2 {
+  margin: 0; /* Removes default margin from the heading. */
+  font-size: 1.5rem; /* Sets the font size for the price text. */
+  color: #001f3f; /* Dark blue color for the price. */
+}
+
+.buttons {
+  display: flex; /* Flexbox is used to align the buttons (quantity controls). */
+  align-items: center; /* Vertically centers the buttons. */
+}
+
+.quantity {
+  padding: 0 10px; /* Adds space inside the quantity number box. */
+  font-weight: bold; /* Makes the quantity number bold. */
+}
+
+/* Hover Effects for Product Items */
+.item:hover {
+  transform: scale(1.05); /* Slightly increases the size of the item when hovered. */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Adds a larger shadow when hovered. */
+}
+
+.item:hover img {
+  transform: scale(1.1); /* Zooms in the image slightly when the item is hovered over. */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #001f3f; /* Dark blue background color for the footer. */
+  color: #fff; /* Sets the text color to white inside the footer. */
+  display: flex; /* Flexbox is used to structure the footer content. */
+  justify-content: space-between; /* Spaces the footer sections evenly. */
+  padding: 40px; /* Adds padding around the footer. */
+  flex-wrap: wrap; /* Allows footer items to wrap on smaller screens. */
+}
+
+footer h2 {
+  font-size: 18px; /* Sets the size of headings in the footer. */
+  margin-bottom: 15px; /* Adds space below each heading. */
+}
+
+footer a {
+  color: #ffffff; /* Sets the link color to white inside the footer. */
+  text-decoration: none; /* Removes the underline from footer links. */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Adds underline when links are hovered. */
+}
+
+footer .social-media a {
+  font-size: 24px; /* Increases the size of social media icons. */
+  margin-right: 15px; /* Adds space between social media icons. */
+}
+
+footer .social-media a:hover {
+  color: #5290f9; /* Changes the color of icons to blue when hovered. */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Starts with the element invisible. */
+    transform: translateY(20px); /* Starts with the element moved down by 20px. */
+  }
+  100% {
+    opacity: 1; /* Ends with the element fully visible. */
+    transform: translateY(0); /* Ends with the element in its original position. */
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0; /* Starts with the element invisible. */
+    transform: translateY(40px); /* Starts with the element moved down by 40px. */
+  }
+  100% {
+    opacity: 1; /* Ends with the element fully visible. */
+    transform: translateY(0); /* Ends with the element in its original position. */
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  /* When the screen width is less than 768px (tablet or smaller): */
+  
+  .hero h1 {
+    font-size: 3rem; /* Reduces the font size of the hero heading for smaller screens. */
   }
 
-  .head {
-    background-color: black;
+  .cta-btn {
+    padding: 10px 20px; /* Reduces button padding to fit smaller screens. */
   }
-  
-  nav {
-    font-family: "Muli", sans-serif;
-    background-color: #000000;
-    padding: 20px;
-    width: 100px;
-    background-image: linear-gradient(#5290f9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: width 0.6s linear;
+
+  .shop {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+    /* Makes sure shop items fit better on smaller screens by adjusting the column size. */
   }
-  
-  nav.active {
-    width: 500px;
+
+  nav .icon {
+    display: block; /* Displays the hamburger icon for mobile navigation. */
   }
-  
+
   nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 0;
-    transition: width 0.6s linear;
+    display: none; /* Hides the normal navigation links for mobile devices. */
   }
-  
+
   nav.active ul {
-    width: 100%;
-  }
-  
-  nav ul li {
-    transform: rotateY(0deg);
-    opacity: 0;
-    transition: transform 0.6s linear, opacity 0.6s linear;
-  }
-  
-  nav.active ul li {
-    opacity: 1;
-    transform: rotateY(360deg);
-  }
-  
-  nav ul a {
-    position: relative;
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
+    display: flex; /* Shows the links in a column format when the hamburger icon is clicked. */
+    flex-direction: column; /* Stacks the navigation links vertically on mobile. */
+    width: 100%; /* Makes the navigation take up the full width of the mobile screen. */
+    text-align: center; /* Centers the text horizontally on mobile. */
   }
 
-  .icon {
-    background-color: #000000;
-    border: 0;
-    cursor: pointer;
-    padding: 0;
-    position: relative;
-    height: 30px;
-    width: 30px;
+  .footer-content {
+    flex-direction: column; /* Stacks the footer sections vertically on mobile. */
+    text-align: center; /* Centers the footer text horizontally. */
   }
-  
-  .icon:focus {
-    outline: 0;
-  }
-  
-  .icon .line {
-    background-color: #ffffff;
-    height: 2px;
-    position: absolute;
-    width: 20px;
-    top: 10px;
-    left: 5px;
-    transition: transform 0.6s linear;
-  }
-  
-  .icon .line2 {
-    top: auto;
-    bottom: 10px;
-  }
-  
-  nav.active .icon .line1 {
-    transform: rotate(-765deg) translateY(5.5px);
-  }
-  
-  nav.active .icon .line2 {
-    transform: rotate(765deg) translateY(-5.5px);
-  }
-
-  header {
-    color: rgb(111, 221, 255);
-    font-size: 500%;
-    margin: 0;
-    padding: 20px;
-    height: auto;
-    text-align: center;
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-  }
-  
-  header p {
-    color: rgb(255, 255, 255);
-    font-size: 23%;
-  }
-
-
-
-
-  footer {
-    display: flex;
-    background-color: #000;
-    color: #fff;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: auto;
-  }
-  
+}
