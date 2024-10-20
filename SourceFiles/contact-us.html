@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Contact Us</title>
-    <link rel="stylesheet" href="contact-us.css">
-</head>
-<body>
+    <link rel="stylesheet" href="contact-us.css" />
+  </head>
+  <body>
     <div class="head">
-        <nav id="nav">
-            <ul>
-              <li><a href="Home.html"><b>Home</b></a></li>
-              <li><a href="sale.html"><b>Sale</b></a></li>
-              <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-              <li><a href="cart.html"><b>Your Cart</b></a></li>
-            </ul>
-            <button class="icon" id="toggle">
-              <div class="line line1"></div>
-              <div class="line line2"></div>
-            </button>
-          </nav>
-      </div>
+      <nav id="nav">
+        <ul>
+          <li>
+            <a href="Home.html"><b>Home</b></a>
+          </li>
+          <li>
+            <a href="sale.html"><b>Sale</b></a>
+          </li>
+          <li>
+            <a href="contact-us.html"><b>Contact Us</b></a>
+          </li>
+          <li>
+            <a href="cart.html"><b>Your Cart</b></a>
+          </li>
+        </ul>
+        <button class="icon" id="toggle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </button>
+      </nav>
+    </div>
 
     <h1>Contact Us</h1>
     <form action="send_email.php" method="POST">
-        <label for="firstName">First Name:</label><br>
-        <input type="text" id="firstName" name="firstName" required><br><br>
+      <label for="firstName">First Name:</label><br />
+      <input type="text" id="firstName" name="firstName" required /><br /><br />
 
-        <label for="lastName">Last Name:</label><br>
-        <input type="text" id="lastName" name="lastName" required><br><br>
+      <label for="lastName">Last Name:</label><br />
+      <input type="text" id="lastName" name="lastName" required /><br /><br />
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" required></textarea><br /><br />
 
-        <input type="submit" value="Submit">
+      <button type="submit" class="submit-button">
+        <i class="fas fa-paper-plane button-icon"></i> Submit
+      </button>
     </form>
 
     <footer>
-        <div>
-          <a href="">GET HELP</a><br>
-          <a href="">Help Center</a><br>
-          <a href="">Frequently Asked Questions</a><br>
-          <a href="">Order Statues</a><br>
-          <a href="">EGGTech Credit Card</a><br>
-          <a href="">Returns</a><br>
-          Owners : (Please put your names here, This will be at the footer of each page)<br>
-        </div>
-     </footer>
-     <script src="contact-us.js"></script>    
-</body>
+      <div>
+        <a href="">GET HELP</a><br />
+        <a href="">Help Center</a><br />
+        <a href="">Frequently Asked Questions</a><br />
+        <a href="">Order Statues</a><br />
+        <a href="">EGGTech Credit Card</a><br />
+        <a href="">Returns</a><br />
+        Owners : (Please put your names here, This will be at the footer of each
+        page)<br />
+      </div>
+    </footer>
+    <script src="contact-us.js"></script>
+  </body>
 </html>
-

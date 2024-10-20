@@ -112,3 +112,24 @@ body {
     padding: 20px;
     height: auto;
   }
+
+  .submit-button {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.submit-button:hover {
+    background-color: #3295c4;
+}
+
+.button-icon {
+    margin-right: 5px;
+}
