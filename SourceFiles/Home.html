@@ -15,17 +15,19 @@
 <body>
   <!-- Header Section -->
   <header>
-    <div class="container">
+    <div class="header-container">
+      <div class="logo-and-title">
+        <img src="EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
+        <h1>EGGTech</h1>
+      </div>
       <nav id="nav" aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="Home.html"><b>Home</b></a></li>
-          <li><a href="sale.html"><b>Sale</b></a></li>
-          <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-          <li><a href="cart.html"><b>Your Cart</b> 
-            <i class="bi bi-cart4" aria-label="Cart Icon"></i>
-            <span id="cart-count" class="cart-count">0</span> <!-- Cart count badge -->
-          </a></li>
-        </ul>
+        <a href="Home.html">Home</a>
+        <a href="sale.html">Sale</a>
+        <a href="contact-us.html">Contact Us</a>
+      </nav>
+      <a href="cart.html" class="cart-icon">
+        <i class="bi bi-cart4" aria-label="Cart Icon"></i>
+      </a>
 
         <!-- Hamburger menu for mobile view -->
         <button class="menu-toggle icon" id="toggle" aria-label="Menu Toggle">
