@@ -1,232 +1,286 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-*{
-   box-sizing: border-box;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body */
 body {
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
+  background-color: #f4f7f9; /* Light background for overall clean look */
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+  background-color: white; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a neat look */
+  padding: 15px 30px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-and-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo-and-title .logo {
+  height: 50px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+header h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100; /* Thin font weight */
+  margin: 0;
+}
+
+nav#nav {
+  flex: 1;
+  text-align: center;
+}
+
+nav#nav a {
+  color: #001f3f; /* Set dark blue for all links */
+  font-size: 16px;
+  text-decoration: none; /* Remove underlines */
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+nav#nav a:hover {
+  color: #5290f9; /* Accent color for hover */
+}
+
+.cart-icon {
+  color: #001f3f;
+}
+
+.cart-icon i {
+  font-size: 30px; /* Increase size */
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f4f7f9; /* Lighter hero section background */
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #001f3f; /* Dark Blue */
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #5290f9;
+  color: white;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #001f3f;
+  transform: scale(1.05);
+}
+
+/* Shop Section */
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: white; /* White background for product section */
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #f4f7f9;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.item:hover img {
+  transform: scale(1.1); /* Zooms in image slightly */
+}
+
+.item h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.item .price-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item .price-quantity h2 {
+  font-size: 1.5rem;
+  color: #001f3f; /* Dark Blue for price */
+}
+
+.item .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.item .buttons i {
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.item .quantity {
+  font-size: 1rem;
+  margin: 0 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #001f3f;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  background-color: #f4f7f9;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial h3 {
+  font-size: 1.1rem;
+  color: #001f3f;
+}
+
+/* Footer */
+footer {
+  background-color: #001f3f; /* Dark Blue background */
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content section {
+  margin-bottom: 20px;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
   }
 
-  .head {
-    background-color: black;
-  }
-  
-  nav {
-    font-family: "Muli", sans-serif;
-    background-color: #000000;
-    padding: 20px;
-    width: 100px;
-    background-image: linear-gradient(#5290f9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: width 0.6s linear;
-  }
-  
-  nav.active {
-    width: 500px;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 0;
-    transition: width 0.6s linear;
-  }
-  
-  nav.active ul {
-    width: 100%;
-  }
-  
-  nav ul li {
-    transform: rotateY(0deg);
-    opacity: 0;
-    transition: transform 0.6s linear, opacity 0.6s linear;
-  }
-  
-  nav.active ul li {
-    opacity: 1;
-    transform: rotateY(360deg);
-  }
-  
-  nav ul a {
-    position: relative;
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
+  .hero h1 {
+    font-size: 2.5rem;
   }
 
-  .icon {
-    background-color: #000000;
-    border: 0;
-    cursor: pointer;
-    padding: 0;
-    position: relative;
-    height: 30px;
-    width: 30px;
-  }
-  
-  .icon:focus {
-    outline: 0;
-  }
-  
-  .icon .line {
-    background-color: #ffffff;
-    height: 2px;
-    position: absolute;
-    width: 20px;
-    top: 10px;
-    left: 5px;
-    transition: transform 0.6s linear;
-  }
-  
-  .icon .line2 {
-    top: auto;
-    bottom: 10px;
-  }
-  
-  nav.active .icon .line1 {
-    transform: rotate(-765deg) translateY(5.5px);
-  }
-  
-  nav.active .icon .line2 {
-    transform: rotate(765deg) translateY(-5.5px);
-  }
-
-  header {
-    color: rgb(111, 221, 255);
-    font-size: 500%;
-    margin: 0;
-    padding: 20px;
-    height: auto;
-    text-align: center;
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-  }
-  
-  header p {
-    color: rgb(255, 255, 255);
-    font-size: 23%;
-  }
-
-  section.border {
-    background: rgb(63, 96, 146);
-    color: rgb(255, 255, 255);
-    width: 100%;
-    margin: 0;
-    padding: 20px;
-    font-size: 150%;
-    height: auto;
-    text-align: center;
-  
-  }
-
-  section {
-    display: flex;
-  }
-  
-  section.options {
-    padding: 20px;
+  .shop {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 
   .testimonial-container {
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
-    color: #fff;
-    border-radius: 15px;
-    margin: 20px auto;
-    padding: 50px 80px;
-    max-width: 768px;
-    position: relative;
-  }
-  
-  .fa-quote {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 28px;
-    position: absolute;
-    top: 70px;
-  }
-  
-  .fa-quote-right {
-    left: 40px;
-  }
-  
-  .fa-quote-left {
-    right: 40px;
-  }
-  
-  .testimonial {
-    line-height: 28px;
-    text-align: justify;
-  }
-  
-  .user {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .user .user-image {
-    border-radius: 50%;
-    height: 75px;
-    width: 75px;
-    object-fit: cover;
-  }
-  
-  .user .user-details {
-    margin-left: 10px;
-  }
-  
-  .user .username {
-    margin: 0;
-  }
-  
-  .user .role {
-    font-weight: normal;
-    margin: 10px 0;
-  }
-  
-  .progress-bar {
-    background-color: #fff;
-    height: 4px;
-    width: 100%;
-    animation: grow 10s linear infinite;
-    transform-origin: left;
-  }
-  
-  @keyframes grow {
-    0% {
-      transform: scaleX(0);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .testimonial-container {
-      padding: 20px 30px;
-    }
-  
-    .fa-quote {
-      display: none;
-    }
-  }
-
-
-  footer {
-    display: flex;
-    background-color: #000;
-    color: #fff;
     flex-direction: column;
-    text-align: center;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: auto;
   }
+}

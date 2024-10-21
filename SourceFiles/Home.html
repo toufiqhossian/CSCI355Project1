@@ -2,65 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EGGTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGGTech - Elevating Your Tech</title>
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="HomeStyle.css">
-  </head>
+
+  <!-- Bootstrap Icons for cart and other icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
 
 <body>
-  <div class="head">
-    <nav id="nav">
-        <ul>
-          <li><a href="Home.html"><b>Home</b></a></li>
-          <li><a href="sale.html"><b>Sale</b></a></li>
-          <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-          <li><a href="cart.html"><b>Your Cart</b></a></li>
-        </ul>
-        <button class="icon" id="toggle">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-        </button>
-      </nav>
-  </div>
-
+  <!-- Header Section -->
   <header>
-    <b>EGGTech</b>
+    <div class="header-container">
+      <div class="logo-and-title">
+        <img src="EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
+        <h1>EGGTech</h1>
+      </div>
+      <nav id="nav" aria-label="Main Navigation">
+        <a href="Home.html">Home</a>
+        <a href="sale.html">Sale</a>
+        <a href="contact-us.html">Contact Us</a>
+      </nav>
+      <a href="cart.html" class="cart-icon">
+        <i class="bi bi-cart4" aria-label="Cart Icon"></i>
+      </a>
+    </div>
   </header>
 
+  <!-- Hero Section -->
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Welcome to EGGTech</h1>
+      <p>Discover cutting-edge tech at unbeatable prices, designed to elevate your digital life!</p>
+      <a href="sale.html" class="cta-btn">Shop Now</a>
+    </div>
+  </main>
 
-  
-  <section class="border">
-  <div>Read the testimonials of our satisfied customers:</div>
-  </section>
-    <div class="testimonial-container">
-      <div class="progress-bar"></div>
-      <div class="fas fa-quote-right fa-quote"></div>
-      <div class="fas fa-quote-left fa-quote"></div>
-      <p class="testimonial">
-        CodingUniverse has transformed my career. The courses are comprehensive and perfectly catered to my needs.
-      </p>
-      <div class="user">
-        <img
-          src="https://randomuser.me/api/portraits/women/46.jpg"
-          alt="user"
-          class="user-image"
-        />
-        <div class="user-details">
-          <h4 class="username">Miyah Myles</h4>
+  <!-- Shop Section -->
+  <section class="shop" id="shop">
+    <!-- First Product: Computer Keyboard -->
+    <div class="item" data-id="keyboard">
+      <img src="/SourceFiles/CS355 Project images/pexels-olenkabohovyk-1772123.jpg" alt="keyboard">
+      <div class="details">
+        <h3>Computer Keyboard</h3>
+        <p>Sleek, responsive, and designed for professionals.</p>
+        <div class="price-quantity">
+          <h2>$45</h2>
+          <div class="buttons">
+            <i class="bi bi-dash-lg decrease"></i>
+            <div class="quantity">0</div>
+            <i class="bi bi-plus-lg increase"></i>
+          </div>
         </div>
+        <button class="add-to-cart-btn" style="display: none;">Add to Cart</button>
       </div>
     </div>
 
-    <footer>
-      <div>
-        <a href="">GET HELP</a><br>
-        <a href="">Help Center</a><br>
-        <a href="">Frequently Asked Questions</a><br>
-        <a href="">Order Statues</a><br>
-        <a href="">EGGTech Credit Card</a><br>
-        <a href="">Returns</a><br>
-        Owners : (Please put your names here, This will be at the footer of each page)<br>
+    <!-- Second Product: Nikon Camera -->
+    <div class="item" data-id="camera">
+      <img src="/SourceFiles/CS355 Project images/pexels-pixabay-51383.jpg" alt="nikon">
+      <div class="details">
+        <h3>Nikon Camera</h3>
+        <p>Powerful, precise, and crafted for professionals.</p>
+        <div class="price-quantity">
+          <h2>$22</h2>
+          <div class="buttons">
+            <i class="bi bi-dash-lg decrease"></i>
+            <div class="quantity">0</div>
+            <i class="bi bi-plus-lg increase"></i>
+          </div>
+        </div>
+        <button class="add-to-cart-btn" style="display: none;">Add to Cart</button>
       </div>
-    </footer>
-    <script src="HomeScript.js"></script>
+    </div>
+
+    <!-- Third Product: Lightning Cable -->
+    <div class="item" data-id="lightning">
+      <img src="/SourceFiles/CS355 Project images/pexels-didsss-1643753.jpg" alt="lightning">
+      <div class="details">
+        <h3>Lightning Cable</h3>
+        <p>Compact, durable, and built for speed.</p>
+        <div class="price-quantity">
+          <h2>$22</h2>
+          <div class="buttons">
+            <i class="bi bi-dash-lg decrease"></i>
+            <div class="quantity">0</div>
+            <i class="bi bi-plus-lg increase"></i>
+          </div>
+        </div>
+        <button class="add-to-cart-btn" style="display: none;">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"EGGTech has transformed my workflow. The products are top-notch!"</p>
+        <h3>- Alex Johnson</h3>
+      </div>
+      <div class="testimonial">
+        <p>"Exceptional customer service and amazing prices. Highly recommend!"</p>
+        <h3>- Maria Garcia</h3>
+      </div>
+      <div class="testimonial">
+        <p>"A fantastic shopping experience from start to finish."</p>
+        <h3>- Liam Smith</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <!-- First section: Get Help links -->
+      <section>
+        <h2>Get Help</h2>
+        <ul>
+          <li><a href="help-center.html">Help Center</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="order-status.html">Order Status</a></li>
+          <li><a href="credit-card.html">EGGTech Credit Card</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </section>
+
+      <!-- Second section: Owners of the company -->
+      <section>
+        <h2>Owners</h2>
+        <p>Roni Mikhaylov</p>
+        <!-- Add other names here -->
+      </section>
+    </div>
+  </footer>
+
+  <!-- External JS -->
+  <script src="HomeScript.js"></script>
 </body>
 </html>
