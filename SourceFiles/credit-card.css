@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+   box-sizing: border-box;
+}
+
+body {
+    background-color: #4883cf;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+  }
+
+  .head {
+    background-color: black;
+  }
+  
+  nav {
+    font-family: "Muli", sans-serif;
+    background-color: #000000;
+    padding: 20px;
+    width: 100px;
+    background-image: linear-gradient(#5290f9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: width 0.6s linear;
+  }
+  
+  nav.active {
+    width: 500px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6s linear;
+  }
+  
+  nav.active ul {
+    width: 100%;
+  }
+  
+  nav ul li {
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+  }
+  
+  nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+  
+  nav ul a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .icon {
+    background-color: #000000;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .icon:focus {
+    outline: 0;
+  }
+  
+  .icon .line {
+    background-color: #ffffff;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+  }
+  
+  .icon .line2 {
+    top: auto;
+    bottom: 10px;
+  }
+  
+  nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+  }
+  
+  nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+  }
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #1048e1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #3e69e0;
+  }
+
+  footer {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: auto;
+  }
