@@ -5,48 +5,42 @@
     <title>FAQ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
 
   <body>
-    <div class="head">
-      <nav id="nav">
-        <ul>
-          <li>
-            <a href="Home.html"><b>Home</b></a>
-          </li>
-          <li>
-            <a href="sale.html"><b>Sale</b></a>
-          </li>
-          <li>
-            <a href="contact-us.html"><b>Contact Us</b></a>
-          </li>
-          <li>
-            <a href="cart.html"><b>Your Cart</b></a>
-          </li>
-        </ul>
-        <button class="icon" id="nav-toggle">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-        </button>
-      </nav>
-    </div>
+    <header>
+      <div class="header-container">
+        <div class="logo-and-title">
+          <img src="EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
+          <h1>EGGTech</h1>
+        </div>
+        <nav id="nav" aria-label="Main Navigation">
+          <a href="Home.html">Home</a>
+          <a href="sale.html">Sale</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <a href="cart.html" class="cart-icon">
+          <i class="bi bi-cart4" aria-label="Cart Icon"></i>
+        </a>
+      </div>
+    </header>
 
     <h1>Frequently Asked Questions</h1>
 
     <div class="faq-container">
-    <div class="faq">
-        <h3 class="faq-title">
-          What products do you offer?
-        </h3>
-        <p class="faq-text">
-            We offer a wide range of tech products including laptops, smartphones, tablets, accessories, and more.
-        </p>
-        <button class="faq-toggle">
-          <i class="fas fa-chevron-down"></i>
-          <i class="fas fa-times"></i>
-        </button>
-    </div>
-    
+      <div class="faq">
+          <h3 class="faq-title">
+            What products do you offer?
+          </h3>
+          <p class="faq-text">
+              We offer a wide range of tech products including laptops, smartphones, tablets, accessories, and more.
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+      </div>
     
       <div class="faq">
         <h3 class="faq-title">
@@ -86,7 +80,7 @@
           <i class="fas fa-chevron-down"></i>
           <i class="fas fa-times"></i>
         </button>
-    </div>
+      </div>
 
       <div class="faq">
         <h3 class="faq-title">
@@ -127,14 +121,23 @@
         </button>
       </div>
     </div>
-     <footer>
-      <div>
-        <a href="">Help Center</a><br>
-        <a href="faq.html">Frequently Asked Questions</a><br>
-        <a href="">Order Statues</a><br>
-        <a href="credit-card.html">EGGTech Credit Card</a><br>
-        <a href="">Returns</a><br>
-        Owners : Roni Mikhaylov, Esteban Mesa, Hannah Zahler, T, Jin
+    <footer>
+      <div class="footer-content">
+        <section>
+          <h2>Get Help</h2>
+          <ul>
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="order-status.html">Order Status</a></li>
+            <li><a href="credit-card.html">EGGTech Credit Card</a></li>
+            <li><a href="returns.html">Returns</a></li>
+          </ul>
+        </section>
+  
+        <section>
+          <h2>Owners</h2>
+          <p>Roni Mikhaylov, Esteban Mesa, Hannah Zahler, T, Jin,</p>
+        </section>
       </div>
     </footer>
     <script src="faq.js"></script>
