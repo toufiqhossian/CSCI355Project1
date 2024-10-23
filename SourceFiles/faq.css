@@ -1,212 +1,205 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 *{
+   margin: 0;
+   padding: 0;
    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Muli', sans-serif;
-    background-color: #f0f0f0;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    margin: 0;
-  }
+  background-color: #f4f7f9; 
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
 
-  .head {
-    background-color: black;
-  }
-  
-  nav {
-    font-family: "Muli", sans-serif;
-    background-color: #000000;
-    padding: 20px;
-    width: 100px;
-    background-image: linear-gradient(#5290f9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: width 0.6s linear;
-  }
-  
-  nav.active {
-    width: 500px;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 0;
-    transition: width 0.6s linear;
-  }
-  
-  nav.active ul {
-    width: 100%;
-  }
-  
-  nav ul li {
-    transform: rotateY(0deg);
-    opacity: 0;
-    transition: transform 0.6s linear, opacity 0.6s linear;
-  }
-  
-  nav.active ul li {
-    opacity: 1;
-    transform: rotateY(360deg);
-  }
-  
-  nav ul a {
-    position: relative;
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-  }
+header {
+  background-color: white; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 15px 30px;
+}
 
-  .icon {
-    background-color: #000000;
-    border: 0;
-    cursor: pointer;
-    padding: 0;
-    position: relative;
-    height: 30px;
-    width: 30px;
-  }
-  
-  .icon:focus {
-    outline: 0;
-  }
-  
-  .icon .line {
-    background-color: #ffffff;
-    height: 2px;
-    position: absolute;
-    width: 20px;
-    top: 10px;
-    left: 5px;
-    transition: transform 0.6s linear;
-  }
-  
-  .icon .line2 {
-    top: auto;
-    bottom: 10px;
-  }
-  
-  nav.active .icon .line1 {
-    transform: rotate(-765deg) translateY(5.5px);
-  }
-  
-  nav.active .icon .line2 {
-    transform: rotate(765deg) translateY(-5.5px);
-  }
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  h1 {
-    margin: 50px 0 30px;
-    text-align: center;
-  }
-  
-  .faq-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .faq {
-    background-color: transparent;
-    border: 1px solid #9fa4a8;
-    border-radius: 10px;
-    margin: 20px 0;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s ease;
-  }
-  
-  .faq.active {
-    background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .faq.active::before,
-  .faq.active::after {
-    content: '\3f';
-    font-family: 'Font Awesome 5 Free';
-    color: #6894c3;
-    font-size: 7rem;
-    position: absolute;
-    opacity: 0.2;
-    top: 5px;
-    left: 20px;
-    z-index: 0;
-  }
-  
-  .faq.active::before {
-    color: #0697f8;
-    top: -15px;
-    left: -5px;
-    
-  }
-  
-  .faq-title {
-    margin: 0 35px 0 0;
-  }
-  
-  .faq-text {
-    display: none;
-    margin: 30px 0 0;
-  }
-  
-  .faq.active .faq-text {
-    display: block;
-  }
-  
-  .faq-toggle {
-    background-color: transparent;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    padding: 0;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 30px;
-    width: 30px;
-  }
-  
-  .faq-toggle:focus {
-    outline: 0;
-  }
-  
-  .faq-toggle .fa-times {
-    display: none;
-  }
-  
-  .faq.active .faq-toggle .fa-times {
-    color: #fff;
-    display: block;
-  }
-  
-  .faq.active .faq-toggle .fa-chevron-down {
-    display: none;
-  }
-  
-  .faq.active .faq-toggle {
-    background-color: #9fa4a8;
-  }
+.logo-and-title {
+  display: flex;
+  align-items: center;
+}
 
+.logo-and-title .logo {
+  height: 50px; 
+  margin-right: 10px;
+}
 
-  footer {
-    display: flex;
-    background-color: #000;
-    color: #fff;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: auto;
-  }
+header h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100; 
+  margin: 0;
+}
+
+nav#nav {
+  flex: 1;
+  text-align: center;
+}
+
+nav#nav a {
+  color: #001f3f; 
+  font-size: 16px;
+  text-decoration: none; 
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+nav#nav a:hover {
+  color: #5290f9; 
+}
+
+.cart-icon {
+  color: #001f3f;
+}
+
+.cart-icon i {
+  font-size: 30px; 
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+  
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+  
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\3f';
+  font-family: 'Font Awesome 5 Free';
+  color: #6894c3;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 5px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #0697f8;
+  top: -15px;
+  left: -5px;
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
+
+footer {
+  background-color: #001f3f; /* Dark Blue background */
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content section {
+  margin-bottom: 20px;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 10px;
+}
