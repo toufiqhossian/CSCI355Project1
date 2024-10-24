@@ -1,216 +1,466 @@
-/* Importing Google Fonts for custom typography */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); 
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Importing Font Awesome icons for use in the page */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'); 
-
-/* Resetting styles for consistent look across browsers */
+/* Global Reset */
 * {
-    box-sizing: border-box; /* Ensures padding and borders are included in width and height */
-    margin: 0; /* Removes default margin from all elements */
-    padding: 0; /* Removes default padding from all elements */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Styling for the body to create a visually appealing background and consistent typography */
+/* Body */
 body {
-    background: linear-gradient(135deg, #f6f9fc, #e0e6ed); /* Gradient background from light blue-gray to light gray */
-    font-family: 'Poppins', sans-serif; /* Using Poppins font for a clean and modern look */
-    color: #333; /* Dark gray text color for better readability */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+  background-color: #f4f7f9;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
 }
 
-/* Styling for the header section */
-.head {
-    background: linear-gradient(135deg, #001f3f, #004080); /* Dark blue gradient background */
-    padding: 10px 20px; /* Padding around the header content */
+/* Header Section */
+header {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
 }
 
-/* Styling for navigation bar inside the header */
-nav {
-    display: flex; /* Flexbox for horizontal alignment */
-    justify-content: space-between; /* Space out items evenly across the width */
-    align-items: center; /* Vertically center the items */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Styling for the unordered list inside the navigation */
-nav ul {
-    display: flex; /* Display items in a row */
-    list-style: none; /* Removes default bullet points */
+.logo-and-title {
+  display: flex;
+  align-items: center;
 }
 
-/* Styling for individual list items in the navigation bar */
-nav ul li {
-    margin: 0 15px; /* Adds spacing between the navigation links */
+.logo-and-title .logo {
+  height: 50px;
+  margin-right: 10px;
 }
 
-/* Styling for the links in the navigation bar */
-nav ul a {
-    color: #ffffff; /* Sets the link text color to white */
-    font-size: 18px; /* Sets the font size for better readability */
-    text-decoration: none; /* Removes the underline from links */
-    transition: color 0.3s ease; /* Smooth transition for color change on hover */
+header h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  margin: 0;
 }
 
-/* Hover effect for navigation links */
-nav ul a:hover {
-    color: #ffcb05; /* Changes the link color to yellow on hover */
+nav#nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
-/* Styling for the burger menu icon (visible on smaller screens) */
-.icon {
-    display: none; /* Hidden by default */
-    cursor: pointer; /* Changes cursor to pointer on hover */
+nav#nav a {
+  color: #001f3f;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
 }
 
-/* Styling for each line in the burger menu */
-.icon .line {
-    background-color: #ffffff; /* Sets line color to white */
-    height: 2px; /* Sets the thickness of the lines */
-    width: 20px; /* Sets the width of the lines */
-    margin: 5px 0; /* Adds space between the lines */
+nav#nav a:hover {
+  color: #5290f9;
 }
 
-/* Styling for the Contact Us form container */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  color: #001f3f;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+    width: 50px; /* Start with the width of the button */
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+  
+  .search .input {
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    height: 50px;
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .search .btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .search.active {
+    width: 200px; /* Expand the search container */
+  }
+  
+  .search.active .input {
+    width: 100%;
+    padding: 0 15px;
+    opacity: 1;
+  }
+  
+  .search.active .btn {
+    transform: translateX(150px); /* Move the button to the end */
+  }
+  
+
+/* Adjusted Navigation Layout */
+nav#nav {
+  flex: 1;
+  justify-content: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Contact Form Styles */
 .contact-container {
-    padding: 60px 40px; /* Adds padding around the form for spacing */
-    text-align: center; /* Centers the text inside the container */
-    background-color: #ffffff; /* Sets background color to white */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Adds a shadow for a floating effect */
-    max-width: 700px; /* Sets a maximum width for the container */
-    margin: 60px auto; /* Centers the container horizontally and adds vertical space */
-    border-radius: 20px; /* Rounds the corners for a softer look */
-    background: linear-gradient(145deg, #fff, #f0f4f7); /* Adds a soft gradient for a more appealing background */
-    animation: fadeIn 1s ease-in-out; /* Fades the container into view */
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for the main heading of the contact section */
 .contact-title {
-    font-size: 3.5rem; /* Large font size for emphasis */
-    color: #001f3f; /* Dark blue color for contrast */
-    margin-bottom: 20px; /* Adds space below the heading */
-    animation: fadeUp 1.2s ease; /* Animation to fade the heading in and move it upwards */
+  color: #001f3f;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Styling for the description text in the contact section */
 .contact-description {
-    font-size: 1.3rem; /* Sets font size for the description */
-    margin-bottom: 40px; /* Adds space below the description */
-    color: #666; /* Sets text color to a medium gray */
-    animation: fadeUp 1.4s ease; /* Animation to fade the description in and move it upwards */
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Styling for the contact form */
 .contact-form {
-    display: flex; /* Flexbox layout for form elements */
-    flex-direction: column; /* Aligns elements vertically */
-    gap: 25px; /* Adds spacing between form elements */
-    animation: fadeUp 1.6s ease; /* Animation to fade the form in and move it upwards */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Styling for form labels */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-group label {
-    font-weight: 600; /* Makes the label text bold */
-    color: #001f3f; /* Dark blue color for labels */
-    font-size: 1.2rem; /* Sets font size for labels */
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-/* Styling for input fields and textarea */
-.form-group input, .form-group textarea {
-    width: 100%; /* Takes the full width of the container */
-    padding: 15px 20px; /* Adds padding inside the input for better usability */
-    font-size: 1rem; /* Sets font size for input text */
-    border-radius: 10px; /* Rounds the corners for a softer look */
-    border: 1px solid #ccc; /* Adds a light gray border */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effect */
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-/* Focus effect for input fields and textarea */
-.form-group input:focus, .form-group textarea:focus {
-    border-color: #ffcb05; /* Changes border color to yellow when focused */
-    box-shadow: 0 0 8px rgba(255, 203, 5, 0.3); /* Adds a glow effect when focused */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
-/* Specific styling for textarea */
-textarea {
-    height: 150px; /* Sets a fixed height for the textarea */
-    resize: none; /* Prevents resizing of the textarea */
-}
-
-/* Styling for the submit button */
 .submit-btn {
-    background: linear-gradient(135deg, #001f3f, #004080); /* Dark blue gradient background */
-    color: #ffffff; /* Sets text color to white */
-    border: none; /* Removes default border */
-    padding: 15px 30px; /* Adds padding for button size */
-    font-size: 1.2rem; /* Sets font size for button text */
-    text-transform: uppercase; /* Converts text to uppercase */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    border-radius: 10px; /* Rounds the corners for a softer look */
-    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  background-color: #5290f9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: center;
 }
 
-/* Hover effect for the submit button */
 .submit-btn:hover {
-    background: #ffcb05; /* Changes background color to yellow */
-    transform: scale(1.05); /* Slightly increases the size of the button */
+  background-color: #001f3f;
 }
 
-/* Styling for the footer section */
+/* Footer Styles */
 footer {
-    background: #001f3f; /* Dark blue background */
-    color: #ffffff; /* Sets text color to white */
-    padding: 40px 20px; /* Adds padding for spacing around the footer */
-    text-align: center; /* Centers the text */
+  background-color: #001f3f;
+  color: white;
+  padding: 40px;
+  text-align: center;
 }
 
-/* Styling for links inside the footer */
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
 footer a {
-    color: #ffffff; /* Sets link color to white */
-    text-decoration: none; /* Removes underline from links */
+  color: white;
+  text-decoration: none;
 }
 
-/* Hover effect for footer links */
 footer a:hover {
-    color: #ffcb05; /* Changes link color to yellow on hover */
+  text-decoration: underline;
 }
 
-/* Animation for elements to fade and move upwards */
-@keyframes fadeUp {
-    0% {
-        opacity: 0; /* Starts fully transparent */
-        transform: translateY(30px); /* Starts below original position */
-    }
-    100% {
-        opacity: 1; /* Ends fully visible */
-        transform: translateY(0); /* Ends in original position */
-    }
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Animation for elements to fade in */
-@keyframes fadeIn {
-    0% {
-        opacity: 0; /* Starts fully transparent */
-    }
-    100% {
-        opacity: 1; /* Ends fully visible */
-    }
+.footer-content section {
+  margin-bottom: 20px;
 }
 
-/* Responsive Design for smaller screens */
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 10px;
+}
+
+.locations-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #001f3f;
+    margin: 40px 0 20px;
+  }
+  
+
+.locations-container {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+  
+  .panel {
+    flex: 1;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    transition: flex 0.5s ease-in-out;
+    border-radius: 10px;
+    height: 100%;
+  }
+  
+  .panel h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .panel.active {
+    flex: 5;
+  }
+  
+  .location-info {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .location-info.show {
+    opacity: 1;
+  }
+  
+  
+  
+  .panel .address {
+    margin: 0 10px 10px 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .get-help-btn {
+    background-color: #5290f9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-help-btn:hover {
+    background-color: #001f3f;
+  }
+  
+  
+
+ /* Cart Count Badge Styling */
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 12px;
+    position: absolute;
+    top: -5px; /* Adjusts the top position of the cart count */
+    right: -10px; /* Adjusts the right position of the cart count */
+    display: inline-block;
+    z-index: 10; /* Makes sure it stays on top of other elements */
+  }
+  
+  /* Cart Preview */
+  .cart-container {
+    position: relative;
+  }
+  
+  .cart-preview {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    z-index: 100;
+  }
+  
+  .cart-preview p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .cart-preview .cart-items {
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 10px 0;
+  }
+  
+  .cart-preview .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .cart-preview .view-cart-btn {
+    display: block;
+    background-color: #5290f9;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .cart-preview .view-cart-btn:hover {
+    background-color: #001f3f;
+  }
+  
+/* Styling for the banner image */
+.contact-banner-wrapper {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide overflow to make sure there's no white space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    display: block;
+  }
+  
+  
+  
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .contact-container {
-        padding: 40px 20px; /* Reduces padding for smaller screens */
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    .contact-title {
-        font-size: 2.5rem; /* Reduces font size for better fit on smaller screens */
-    }
+  .header-container {
+    flex-wrap: wrap;
+  }
 
-    .contact-description {
-        font-size: 1.1rem; /* Reduces font size for better readability */
-    }
+  nav#nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
 
-    footer {
-        padding: 20px; /* Reduces padding for the footer on smaller screens */
-    }
+  .header-right {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .logo-and-title {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-content section {
+    margin-bottom: 20px;
+  }
+
+  .locations-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .panel {
+    margin-bottom: 20px;
+    flex: 1 1 calc(50% -10px)
+  }
 }
+@media (max-width: 480px) {
+    .panel {
+      flex: 1 1 100%;
+    }
+  }

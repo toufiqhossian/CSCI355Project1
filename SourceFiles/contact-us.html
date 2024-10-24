@@ -1,85 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Defining the document type as HTML5 and setting the language to English -->
-    <meta charset="UTF-8">
-    <title>Contact Us</title>
-    <!-- Linking an external CSS file for styling this page -->
-    <link rel="stylesheet" href="contact-us.css">
-    <!-- Making the website responsive by setting the viewport to adjust to the user's screen size -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact-us.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
+
 <body>
-    <!-- Header Section -->
-    <div class="head">
-        <nav id="nav">
-            <ul>
-                <!-- List of navigation links to various pages of the website -->
-                <li><a href="Home.html"><b>Home</b></a></li>
-                <li><a href="sale.html"><b>Sale</b></a></li>
-                <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-                <li><a href="cart.html"><b>Your Cart</b></a></li>
-            </ul>
-            <!-- Toggle button for showing/hiding the navigation menu on smaller screens -->
-            <button class="icon" id="toggle">
-                <!-- Lines for the burger menu icon -->
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-            </button>
-        </nav>
-    </div>
-
-    <!-- Contact Form Section -->
-    <div class="contact-container">
-        <!-- Main heading for the contact page -->
-        <h1 class="contact-title">Get in Touch</h1>
-        <!-- Short description to encourage users to fill out the contact form -->
-        <p class="contact-description">We'd love to hear from you. Please fill out the form below, and our team will respond promptly.</p>
-
-        <!-- Contact form where users can fill out their details and message -->
-        <form action="send_email.php" method="POST" class="contact-form">
-            <!-- Input field for first name -->
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" required>
+  <header> 
+    <div class="header-container">
+      <div class="logo-and-title">
+        <img src="EGGTech_Logo.jpg" alt="EGGTech Logo" class="logo">
+        <h1>EGGTech</h1>
+      </div>
+      <nav id="nav" aria-label="Main Navigation">
+        <a href="Home.html">Home</a>
+        <a href="sale.html">Sale</a>
+        <a href="contact-us.html">Contact Us</a>
+      </nav>
+      <div class="header-right">
+        <!-- Cart and Search Section -->
+        <div class="cart-container">
+          <a href="cart.html" class="cart-icon">
+            <i class="bi bi-cart4" aria-label="Cart Icon"></i>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+          <!-- Cart Preview -->
+          <div class="cart-preview" id="cart-preview">
+            <p id="cart-message">No items in your cart.</p>
+            <div class="cart-items" id="cart-items">
+              <!-- Cart items will be dynamically added here -->
             </div>
-
-            <!-- Input field for last name -->
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-
-            <!-- Input field for email address -->
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <!-- Text area for user message -->
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <!-- Submit button for sending the form -->
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <div>
-            <!-- Links to help and support pages -->
-            <a href="">GET HELP</a><br>
-            <a href="">Help Center</a><br>
-            <a href="">Frequently Asked Questions</a><br>
-            <a href="">Order Status</a><br>
-            <a href="">EGGTech Credit Card</a><br>
-            <a href="">Returns</a><br>
+            <a href="cart.html" class="view-cart-btn">View Cart</a>
+          </div>
         </div>
-    </footer>
-    <!-- Linking an external JavaScript file to add interactivity to the contact page -->
-    <script src="contact-us.js"></script>    
+
+        <div class="search">
+          <input type="text" class="input" placeholder="Search...">
+          <button class="btn">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Image placed between navigation and main content -->
+  <div class="contact-banner-wrapper">
+    <img src="headerIMG.jpg" alt="Tech Products Banner" class="contact-banner">
+  </div>
+
+  <!-- Contact Us Form Section -->
+  <main class="contact-container">
+    <h1 class="contact-title">Contact Us</h1>
+    <p class="contact-description">We're here to help you with any inquiries or feedback!</p>
+    <form action="send_email.php" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <!-- Our Locations Section -->
+    <h1 class="locations-title">Our Locations</h1>
+    <div class="locations-container">
+      <div class="panel" data-address="Located in: Galleria Dallas, Address: 13350 Dallas Pkwy, Dallas, TX 75240"
+        style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/View_of_Dallas_from_Reunion_Tower_August_2015_13.jpg/800px-View_of_Dallas_from_Reunion_Tower_August_2015_13.jpg');">
+        <h3>Dallas</h3>
+      </div>
+      <div class="panel" data-address="Address: 767 5th Ave, New York, NY 10153"
+        style="background-image: url('https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg');">
+        <h3>New York</h3>
+      </div>
+      <div class="panel" data-address="Address: 300 Post St, San Francisco, CA 94108"
+        style="background-image: url('https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg');">
+        <h3>San Francisco</h3>
+      </div>
+      <div class="panel" data-address="Address: 701 S Miami Ave, Miami, FL 33130"
+        style="background-image: url('https://static.independent.co.uk/2023/03/20/16/iStock-590299316.jpg');">
+        <h3>Miami</h3>
+      </div>
+      <div class="panel" data-address="Address: 802 S Broadway, Los Angeles, CA 90014"
+        style="background-image: url('https://laedc.org/wpcms/wp-content/uploads/2022/03/Central-LA-1.jpeg');">
+        <h3>Los Angeles</h3>
+      </div>
+    </div>
+
+    <div id="location-info" class="location-info"></div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <section>
+        <h2>Get Help</h2>
+        <ul>
+          <li><a href="help-center.html">Help Center</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="order-status.html">Order Status</a></li>
+          <li><a href="credit-card.html">EGGTech Credit Card</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Owners</h2>
+        <p>Roni Mikhaylov, Esteban Mesa, T, Jin, Hanz</p>
+      </section>
+    </div>
+  </footer>
+
+  <script src="contact-us.js"></script>
 </body>
+
 </html>
