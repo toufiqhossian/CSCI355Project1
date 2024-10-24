@@ -2,199 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EGGTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGGTech Sale</title>
   <link rel="stylesheet" href="sale.css">
-  </head>
-
+</head>
 <body>
+
+  <!-- Navigation Header -->
   <div class="head">
     <nav id="nav">
-        <ul>
-          <li><a href="Home.html"><b>Home</b></a></li>
-          <li><a href="sale.html"><b>Sale</b></a></li>
-          <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-          <li><a href="cart.html"><b>Your Cart</b></a></li>
-        </ul>
-        <button class="icon" id="toggle">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-        </button>
-      </nav>
+      <div class="logo">
+        <h1>EGGTech</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="sale.html">Sale</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="cart.html">Your Cart <span id="cart-count">0</span></a></li>
+      </ul>
+      <button class="menu-toggle icon" id="toggle">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </button>
+    </nav>
   </div>
 
+  <!-- Header with Sale Title -->
   <header>
-    <b>Items on Sale!</b>
+    <h1>Welcome to EGGTech's Exclusive Sale</h1>
   </header>
 
-  <!--______________________________________________________-->
+  <!-- Product Grid Section -->
+  <div class="product-section">
+    <div class="product-grid">
 
-  <table class="product-table">
-    <tr>
-        <td class="item">
-            <img src="laptop.jpg" alt="Laptop Image">
-            <h3>High-Performance Laptop</h3>
-            <p>15.6" Full HD, Intel i7, 16GB RAM, 512GB SSD.</p>
-            <div class="price">$1,299.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <!-- Product Cards -->
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/laptop.jpg" alt="Laptop Image" class="product-image">
+        <h3>High-Performance Laptop</h3>
+        <p class="price">$1,299.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="laptop" data-price="1299.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="smartphone.jpg" alt="Smartphone Image">
-            <h3>Flagship Smartphone</h3>
-            <p>6.7" OLED display, 128GB storage, 5G enabled.</p>
-            <div class="price">$799.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/smartphone.jpg" alt="Smartphone Image" class="product-image">
+        <h3>Flagship Smartphone</h3>
+        <p class="price">$799.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="smartphone" data-price="799.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="headphones.jpg" alt="Headphones Image">
-            <h3>Wireless Noise-Cancelling Headphones</h3>
-            <p>Over-ear, 30 hours battery life, Bluetooth 5.0.</p>
-            <div class="price">$249.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/headphones.jpg" alt="Headphones Image" class="product-image">
+        <h3>Wireless Noise-Cancelling Headphones</h3>
+        <p class="price">$249.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="headphones" data-price="249.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="smartwatch.jpg" alt="Smartwatch Image">
-            <h3>Smartwatch</h3>
-            <p>Fitness tracking, GPS, Heart-rate monitor, Waterproof.</p>
-            <div class="price">$199.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/smartwatch.jpg" alt="Smartwatch Image" class="product-image">
+        <h3>Smartwatch</h3>
+        <p class="price">$199.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="smartwatch" data-price="199.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="gaming-console.jpg" alt="Gaming Console Image">
-            <h3>Next-Gen Gaming Console</h3>
-            <p>Ultra 4K gaming, 1TB storage, immersive gameplay.</p>
-            <div class="price">$499.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
-    </tr>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/gaming-console.jpg" alt="Gaming Console Image" class="product-image">
+        <h3>Next-Gen Gaming Console</h3>
+        <p class="price">$499.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="gaming-console" data-price="499.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-    <tr>
-        <td class="item">
-            <img src="tablet.jpg" alt="Tablet Image">
-            <h3>Latest-Gen Tablet</h3>
-            <p>10.5" Retina display, 64GB storage, Apple Pencil compatible.</p>
-            <div class="price">$499.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/tablet.jpg" alt="Tablet Image" class="product-image">
+        <h3>Latest-Gen Tablet</h3>
+        <p class="price">$499.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="tablet" data-price="499.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="drone.jpg" alt="Drone Image">
-            <h3>4K Camera Drone</h3>
-            <p>Ultra HD camera, 30-min flight time, GPS navigation.</p>
-            <div class="price">$799.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/drone.jpg" alt="Drone Image" class="product-image">
+        <h3>4K Camera Drone</h3>
+        <p class="price">$799.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="drone" data-price="799.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="vr-headset.jpg" alt="VR Headset Image">
-            <h3>Virtual Reality Headset</h3>
-            <p>Immersive VR gaming, 1080p display, ergonomic design.</p>
-            <div class="price">$349.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/vr-headset.jpg" alt="VR Headset Image" class="product-image">
+        <h3>Virtual Reality Headset</h3>
+        <p class="price">$349.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="vr-headset" data-price="349.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="gaming-chair.jpg" alt="Gaming Chair Image">
-            <h3>Ergonomic Gaming Chair</h3>
-            <p>High backrest, lumbar support, adjustable height.</p>
-            <div class="price">$199.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/gaming-chair.jpg" alt="Gaming Chair Image" class="product-image">
+        <h3>Ergonomic Gaming Chair</h3>
+        <p class="price">$199.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="gaming-chair" data-price="199.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="smart-light.jpg" alt="Smart Light Image">
-            <h3>Smart Light Bulbs (4-pack)</h3>
-            <p>App-controlled, color-changing, energy-saving.</p>
-            <div class="price">$49.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
-    </tr>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/smart-light.jpg" alt="Smart Light Image" class="product-image">
+        <h3>Smart Light Bulbs (4-pack)</h3>
+        <p class="price">$49.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="smart-light" data-price="49.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-    <tr>
-        <td class="item">
-            <img src="action-camera.jpg" alt="Action Camera Image">
-            <h3>Action Camera</h3>
-            <p>4K recording, waterproof, 120fps slow-motion mode.</p>
-            <div class="price">$299.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/action-camera.jpg" alt="Action Camera Image" class="product-image">
+        <h3>Action Camera</h3>
+        <p class="price">$299.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="action-camera" data-price="299.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="portable-charger.jpg" alt="Portable Charger Image">
-            <h3>Portable Power Bank</h3>
-            <p>20000mAh, fast charging, USB-C, slim design.</p>
-            <div class="price">$39.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/portable-charger.jpg" alt="Portable Charger Image" class="product-image">
+        <h3>Portable Power Bank</h3>
+        <p class="price">$39.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="portable-charger" data-price="39.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="smart-speaker.jpg" alt="Smart Speaker Image">
-            <h3>Voice-Controlled Smart Speaker</h3>
-            <p>Hands-free music control, voice assistant built-in.</p>
-            <div class="price">$129.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/smart-speaker.jpg" alt="Smart Speaker Image" class="product-image">
+        <h3>Voice-Controlled Smart Speaker</h3>
+        <p class="price">$129.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="smart-speaker" data-price="129.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="mechanical-keyboard.jpg" alt="Mechanical Keyboard Image">
-            <h3>RGB Mechanical Keyboard</h3>
-            <p>Customizable backlighting, mechanical switches, durable build.</p>
-            <div class="price">$89.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/mechanical-keyboard.jpg" alt="Mechanical Keyboard Image" class="product-image">
+        <h3>RGB Mechanical Keyboard</h3>
+        <p class="price">$89.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="mechanical-keyboard" data-price="89.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-        <td class="item">
-            <img src="smart-thermostat.jpg" alt="Smart Thermostat Image">
-            <h3>Smart Thermostat</h3>
-            <p>Wi-Fi enabled, energy-saving, mobile app control.</p>
-            <div class="price">$149.99</div>
-            <a href="#" class="buy-now">Buy Now</a>
-        </td>
-    </tr>
-</table>
+      <div class="product-card">
+        <img src="/SourceFiles/CS355 Project images/smart-thermostat.jpg" alt="Smart Thermostat Image" class="product-image">
+        <h3>Smart Thermostat</h3>
+        <p class="price">$149.99</p>
+        <div class="quantity-controls">
+          <button class="decrease-quantity">-</button>
+          <span class="quantity">1</span>
+          <button class="increase-quantity">+</button>
+        </div>
+        <button class="add-to-cart" data-product="smart-thermostat" data-price="149.99"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
 
-<!--______________________________________________________-->
-
-<div id="panel" class="panel-container hidden">
-  <strong class="panel-exit">X</strong>
-
-  <strong>How satisfied are you with <br /> EGGTech?</strong>
-
-  <div class="ratings-container">
-    <div class="rating">
-      <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-17.png" alt="">
-      <small>Unhappy</small>
-    </div>
-
-    <div class="rating">
-      <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-3.png" alt=""/>
-      <small>Neutral</small>
-    </div>
-
-    <div class="rating active">
-      <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-30.png" alt=""/>
-      <small>Satisfied</small>
     </div>
   </div>
 
-  <button class="btn" id="send">Send Review</button>
-</div>
- 
-<!--______________________________________________________-->
-   <footer>
-      <div>
-        <a href="">GET HELP</a><br>
-        <a href="">Help Center</a><br>
-        <a href="">Frequently Asked Questions</a><br>
-        <a href="">Order Statues</a><br>
-        <a href="">EGGTech Credit Card</a><br>
-        <a href="">Returns</a><br>
-        Owners : (Please put your names here, This will be at the footer of each page)<br>
-      </div>
-   </footer>
-   <script src="sale.js"></script>
+  <footer>
+    <p>&copy; 2024 EGGTech - All rights reserved.</p>
+  </footer>
+
+  <script src="sale.js"></script>
+   <script>
+    window.onscroll = function () {
+      var navbar = document.querySelector("nav");
+      if (window.scrollY > 100) {
+        navbar.style.backgroundColor = "#002a7f"; /* Darker color after scrolling */
+      } else {
+        navbar.style.backgroundColor = "#004aad"; /* Default color */
+      }
+    };
+  </script>
 </body>
 </html>

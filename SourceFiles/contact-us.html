@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Defining the document type as HTML5 and setting the language to English -->
     <meta charset="UTF-8">
     <title>Contact Us</title>
+    <!-- Linking an external CSS file for styling this page -->
     <link rel="stylesheet" href="contact-us.css">
+    <!-- Making the website responsive by setting the viewport to adjust to the user's screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <!-- Header Section -->
     <div class="head">
         <nav id="nav">
             <ul>
-              <li><a href="Home.html"><b>Home</b></a></li>
-              <li><a href="sale.html"><b>Sale</b></a></li>
-              <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-              <li><a href="cart.html"><b>Your Cart</b></a></li>
+                <!-- List of navigation links to various pages of the website -->
+                <li><a href="Home.html"><b>Home</b></a></li>
+                <li><a href="sale.html"><b>Sale</b></a></li>
+                <li><a href="contact-us.html"><b>Contact Us</b></a></li>
+                <li><a href="cart.html"><b>Your Cart</b></a></li>
             </ul>
+            <!-- Toggle button for showing/hiding the navigation menu on smaller screens -->
             <button class="icon" id="toggle">
-              <div class="line line1"></div>
-              <div class="line line2"></div>
+                <!-- Lines for the burger menu icon -->
+                <div class="line line1"></div>
+                <div class="line line2"></div>
             </button>
-          </nav>
-      </div>
+        </nav>
+    </div>
 
-    <h1>Contact Us</h1>
-    <form action="send_email.php" method="POST">
-        <label for="firstName">First Name:</label><br>
-        <input type="text" id="firstName" name="firstName" required><br><br>
+    <!-- Contact Form Section -->
+    <div class="contact-container">
+        <!-- Main heading for the contact page -->
+        <h1 class="contact-title">Get in Touch</h1>
+        <!-- Short description to encourage users to fill out the contact form -->
+        <p class="contact-description">We'd love to hear from you. Please fill out the form below, and our team will respond promptly.</p>
 
-        <label for="lastName">Last Name:</label><br>
-        <input type="text" id="lastName" name="lastName" required><br><br>
+        <!-- Contact form where users can fill out their details and message -->
+        <form action="send_email.php" method="POST" class="contact-form">
+            <!-- Input field for first name -->
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+            <!-- Input field for last name -->
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
+            <!-- Input field for email address -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <input type="submit" value="Submit">
-    </form>
+            <!-- Text area for user message -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <!-- Submit button for sending the form -->
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
 
     <!-- Footer Section -->
-    <!-- This section is the footer of the page. It contains links, contact information, and social media icons. -->
     <footer>
         <div>
-          <a href="">GET HELP</a><br>
-          <a href="">Help Center</a><br>
-          <a href="">Frequently Asked Questions</a><br>
-          <a href="">Order Statues</a><br>
-          <a href="">EGGTech Credit Card</a><br>
-          <a href="">Returns</a><br>
-          Owners : (Please put your names here, This will be at the footer of each page)<br>
+            <!-- Links to help and support pages -->
+            <a href="">GET HELP</a><br>
+            <a href="">Help Center</a><br>
+            <a href="">Frequently Asked Questions</a><br>
+            <a href="">Order Status</a><br>
+            <a href="">EGGTech Credit Card</a><br>
+            <a href="">Returns</a><br>
         </div>
-     </footer>
-     <script src="contact-us.js"></script>    
+    </footer>
+    <!-- Linking an external JavaScript file to add interactivity to the contact page -->
+    <script src="contact-us.js"></script>    
 </body>
 </html>

@@ -1,271 +1,286 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-*{
-   box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-  }
-
-  .head {
-    background-color: black;
-  }
-
-  header {
-    color: rgb(111, 221, 255);
-    font-size: 500%;
-    margin: 0;
-    padding: 20px;
-    height: auto;
-    text-align: center;
-    background-color: #4883cf;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-  }
-  
-  nav {
-    font-family: "Muli", sans-serif;
-    background-color: #000000;
-    padding: 20px;
-    width: 100px;
-    background-image: linear-gradient(#5290f9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: width 0.6s linear;
-  }
-  
-  nav.active {
-    width: 500px;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 0;
-    transition: width 0.6s linear;
-  }
-  
-  nav.active ul {
-    width: 100%;
-  }
-  
-  nav ul li {
-    transform: rotateY(0deg);
-    opacity: 0;
-    transition: transform 0.6s linear, opacity 0.6s linear;
-  }
-  
-  nav.active ul li {
-    opacity: 1;
-    transform: rotateY(360deg);
-  }
-  
-  nav ul a {
-    position: relative;
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-
-  .icon {
-    background-color: #000000;
-    border: 0;
-    cursor: pointer;
-    padding: 0;
-    position: relative;
-    height: 30px;
-    width: 30px;
-  }
-  
-  .icon:focus {
-    outline: 0;
-  }
-  
-  .icon .line {
-    background-color: #ffffff;
-    height: 2px;
-    position: absolute;
-    width: 20px;
-    top: 10px;
-    left: 5px;
-    transition: transform 0.6s linear;
-  }
-  
-  .icon .line2 {
-    top: auto;
-    bottom: 10px;
-  }
-  
-  nav.active .icon .line1 {
-    transform: rotate(-765deg) translateY(5.5px);
-  }
-  
-  nav.active .icon .line2 {
-    transform: rotate(765deg) translateY(-5.5px);
-  }
-
-
-
-  footer {
-    display: flex;
-    background-color: #000;
-    color: #fff;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: auto;
-  }
-
-.product-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 20px;
-    margin: 0 auto;
+  background: linear-gradient(135deg, #4883cf, #6fa3ef);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
 }
 
-.item {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    vertical-align: top;
-}
-
-.item img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.item h3 {
-    font-size: 18px;
-    color: #333;
-}
-
-.item p {
-    font-size: 14px;
-    color: #666;
-}
-
-.price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #007bff;
-}
-
-.buy-now {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.buy-now:hover {
-    background-color: #0056b3;
-}
-
-.panel-container {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-  font-size: 90%;
+/* Navigation */
+nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  padding: 30px;
-  margin: 20px;
-  max-width: 400px;
-  position: fixed;
+  background-color: #004aad;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 1000;
+  animation: slideDown 1.5s ease-in-out;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+nav:hover {
+  box-shadow: 0 0 30px rgba(255, 203, 5, 0.7);
+}
+
+nav .logo h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  animation: fadeInText 2s ease;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 30px;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
   bottom: 0;
-  right: 0;
+  left: 50%;
+  background-color: #ffcb05;
+  transition: width 0.4s ease, left 0.4s ease;
 }
 
-.panel-container strong {
-  line-height: 20px;
+nav ul li a:hover::before {
+  width: 100%;
+  left: 0%;
 }
 
-.panel-container.hidden {
+nav ul li a:hover {
+  color: #ffcb05;
+  text-shadow: 0 0 8px #ffcb05;
+}
+
+nav ul li.cart-icon:hover {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.icon {
   display: none;
 }
 
-.panel-exit {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    background-color: #004aad;
+    width: 100%;
+    transition: 0.3s ease;
+  }
+
+  nav ul.active {
+    left: 0;
+  }
+
+  nav .icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .icon .line {
+    background-color: #ffffff;
+    height: 3px;
+    margin: 5px;
+    width: 25px;
+  }
 }
 
-.ratings-container {
-  display: flex;
-  margin: 20px 0;
+/* Keyframe Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.rating {
-  flex: 1;
-  cursor: pointer;
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #ffcb05, 0 0 15px #ffcb05, 0 0 20px #ffcb05;
+  }
+  100% {
+    box-shadow: 0 0 20px #ffcb05, 0 0 30px #ffcb05, 0 0 40px #ffcb05;
+  }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #003366;
+  color: #ffffff;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #ffcb05;
+  margin-bottom: 20px;
+}
+
+/* Product Section */
+.product-section {
+  padding: 120px 50px 50px;
+  background-color: #f7f9fc;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 15px;
   padding: 20px;
-  margin: 10px 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
 }
 
-.rating:hover,
-.rating.active {
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
-.rating img {
-  width: 40px;
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  max-height: 200px;
 }
 
-.rating small {
-  color: #555;
-  display: inline-block;
-  margin: 10px 0 0;
+h3 {
+  margin: 15px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
 }
 
-.rating:hover small,
-.rating.active small {
-  color: #111;
+.price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
-.btn {
-  background-color: #302d2b;
-  color: #fff;
-  border: 0;
-  border-radius: 4px;
-  padding: 12px 30px;
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.quantity-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.btn:focus {
-  outline: 0;
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: auto; /* Ensure button stays below all content */
 }
 
-.btn:active {
-  transform: scale(0.98);
+.add-to-cart i {
+  margin-right: 8px;
 }
 
-.fa-heart {
-  color: red;
-  font-size: 30px;
-  margin-bottom: 10px;
+.add-to-cart:hover {
+  background-color: #ffcb05;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer a {
+  color: #ffcb05;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

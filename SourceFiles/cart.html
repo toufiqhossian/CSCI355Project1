@@ -1,40 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML being used -->
+<html lang="en"> <!-- Starts the HTML document and specifies the language as English -->
 <head>
-  <meta charset="UTF-8">
-  <title>EGGTech</title>
-  <link rel="stylesheet" href="cart.css">
-  </head>
-
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8, which supports most characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the webpage responsive, ensuring it fits on different devices -->
+  <title>Your Cart - EGGTech</title> <!-- Sets the title of the webpage that appears on the browser tab -->
+  <link rel="stylesheet" href="cart.css"> <!-- Links to the external CSS file (cart.css) for styling the cart page -->
+</head>
 <body>
-  <div class="head">
-    <nav id="nav">
-        <ul>
-          <li><a href="Home.html"><b>Home</b></a></li>
-          <li><a href="sale.html"><b>Sale</b></a></li>
-          <li><a href="contact-us.html"><b>Contact Us</b></a></li>
-          <li><a href="cart.html"><b>Your Cart</b></a></li>
-        </ul>
 
-        <!-- Hamburger menu for mobile view -->
-        <button class="menu-toggle icon" id="toggle" aria-label="Menu Toggle">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-        </button>
-      </nav>
-  </div>
-  
-   <footer>
-      <div>
-        <a href="">GET HELP</a><br>
-        <a href="">Help Center</a><br>
-        <a href="">Frequently Asked Questions</a><br>
-        <a href="">Order Statues</a><br>
-        <a href="">EGGTech Credit Card</a><br>
-        <a href="">Returns</a><br>
-        Owners : (Please put your names here, This will be at the footer of each page)<br>
+  <!-- Navigation Header -->
+  <div class="head"> <!-- Container for the header section -->
+    <nav id="nav"> <!-- Navigation bar element -->
+      <div class="logo"> <!-- Container for the logo -->
+        <h1>EGGTech</h1> <!-- Main title of the site displayed as a heading -->
       </div>
-   </footer>
-   <script src="cart.js"></script>
+      <ul class="nav-links"> <!-- Unordered list for navigation links -->
+        <li><a href="Home.html">Home</a></li> <!-- Link to the home page -->
+        <li><a href="sale.html">Sale</a></li> <!-- Link to the sales page -->
+        <li><a href="contact-us.html">Contact Us</a></li> <!-- Link to the contact page -->
+        <li><a href="cart.html">Your Cart <span id="cart-count">0</span></a></li> <!-- Link to the cart page, displaying the cart count -->
+      </ul>
+      <button class="menu-toggle icon" id="toggle"> <!-- Button for toggling a mobile menu (for smaller screens) -->
+        <div class="line line1"></div> <!-- First line of the button (hamburger menu icon) -->
+        <div class="line line2"></div> <!-- Second line of the button (hamburger menu icon) -->
+      </button>
+    </nav>
+  </div>
+
+  <!-- Cart Items Section -->
+  <div class="cart-container"> <!-- Main container for cart items and summary -->
+    <h1 class="cart-title">Your Cart</h1> <!-- Title of the cart section -->
+    <div class="cart-items"></div> <!-- Placeholder div where cart items will be dynamically rendered -->
+    <div class="cart-summary"> <!-- Container for displaying the cart summary -->
+      <h2>Total: $0.00</h2> <!-- Heading for the total amount of the cart, initially set to $0.00 -->
+      <button class="checkout-btn">Proceed to Checkout</button> <!-- Button for proceeding to the checkout process -->
+    </div>
+  </div>
+
+  <script src="cart.js"></script> <!-- Links to the external JavaScript file (cart.js) that handles cart functionality -->
 </body>
 </html>

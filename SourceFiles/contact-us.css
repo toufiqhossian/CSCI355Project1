@@ -1,219 +1,216 @@
-/* Importing Google Fonts and Font Awesome icons */
+/* Importing Google Fonts for custom typography */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); 
-/* Poppins is a modern sans-serif font that looks clean and professional. */
 
+/* Importing Font Awesome icons for use in the page */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'); 
-/* Font Awesome provides icons that can be used across the website, like social media icons. */
 
+/* Resetting styles for consistent look across browsers */
 * {
-    /* Universal selector: applies to all elements */
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height. */
-    margin: 0; /* Removes any default margin around elements. */
-    padding: 0; /* Removes any default padding around elements. */
+    box-sizing: border-box; /* Ensures padding and borders are included in width and height */
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
 }
 
-/* Styling for the body (the main container for the webpage) */
+/* Styling for the body to create a visually appealing background and consistent typography */
 body {
-    background-color: #f4f7f9; /* Light background color for the webpage */
-    font-family: 'Poppins', sans-serif; /* Sets the font for the entire page to 'Poppins' */
-    color: #333; /* Sets the default text color to dark gray */
-    overflow-x: hidden; /* Hides horizontal scrolling to prevent the page from overflowing horizontally */
+    background: linear-gradient(135deg, #f6f9fc, #e0e6ed); /* Gradient background from light blue-gray to light gray */
+    font-family: 'Poppins', sans-serif; /* Using Poppins font for a clean and modern look */
+    color: #333; /* Dark gray text color for better readability */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-/* Navigation (Header) Styling */
+/* Styling for the header section */
 .head {
-    background-color: #001f3f; /* Dark blue background for the header */
-    padding: 10px 20px; /* Adds space inside the header for the content */
+    background: linear-gradient(135deg, #001f3f, #004080); /* Dark blue gradient background */
+    padding: 10px 20px; /* Padding around the header content */
 }
 
+/* Styling for navigation bar inside the header */
 nav {
-    display: flex; /* Flexbox is used to align the items inside the navigation */
-    justify-content: space-between; /* Spreads the navigation items (like links) evenly across the navbar */
-    align-items: center; /* Vertically aligns items in the center of the navigation bar */
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: space-between; /* Space out items evenly across the width */
+    align-items: center; /* Vertically center the items */
 }
 
+/* Styling for the unordered list inside the navigation */
 nav ul {
-    display: flex; /* Flexbox makes the list items display in a row */
-    list-style: none; /* Removes bullet points from the list items */
+    display: flex; /* Display items in a row */
+    list-style: none; /* Removes default bullet points */
 }
 
+/* Styling for individual list items in the navigation bar */
 nav ul li {
-    margin: 0 15px; /* Adds space between each list item (link) */
+    margin: 0 15px; /* Adds spacing between the navigation links */
 }
 
+/* Styling for the links in the navigation bar */
 nav ul a {
-    color: #ffffff; /* Makes the link text white */
-    font-size: 18px; /* Sets the font size of the links */
-    text-decoration: none; /* Removes the underline from the links */
-    transition: color 0.3s ease; /* Smooth transition effect when the link is hovered */
+    color: #ffffff; /* Sets the link text color to white */
+    font-size: 18px; /* Sets the font size for better readability */
+    text-decoration: none; /* Removes the underline from links */
+    transition: color 0.3s ease; /* Smooth transition for color change on hover */
 }
 
+/* Hover effect for navigation links */
 nav ul a:hover {
-    color: #5290f9; /* Changes the link color to light blue when hovered */
+    color: #ffcb05; /* Changes the link color to yellow on hover */
 }
 
+/* Styling for the burger menu icon (visible on smaller screens) */
 .icon {
-    display: none; /* Initially hides the hamburger icon (used for mobile navigation) */
-    cursor: pointer; /* Changes the mouse pointer to a pointer (hand icon) when hovering */
+    display: none; /* Hidden by default */
+    cursor: pointer; /* Changes cursor to pointer on hover */
 }
 
+/* Styling for each line in the burger menu */
 .icon .line {
-    background-color: #ffffff; /* White color for the lines in the hamburger icon */
-    height: 2px; /* Thickness of each line */
-    width: 20px; /* Width of each line */
-    margin: 5px 0; /* Adds space between each line */
+    background-color: #ffffff; /* Sets line color to white */
+    height: 2px; /* Sets the thickness of the lines */
+    width: 20px; /* Sets the width of the lines */
+    margin: 5px 0; /* Adds space between the lines */
 }
 
-/* Contact Us Section Styling */
+/* Styling for the Contact Us form container */
 .contact-container {
-    padding: 60px 40px; /* Adds space around the contact form */
-    text-align: center; /* Centers the text inside the form */
-    background-color: #ffffff; /* Sets the background color of the contact form to white */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to give the form a 3D effect */
-    max-width: 700px; /* Limits the width of the form to 700px, even on larger screens */
-    margin: 40px auto; /* Centers the form horizontally with automatic margins */
-    border-radius: 10px; /* Rounds the corners of the form */
-    animation: fadeIn 1s ease-in; /* Fades the form into view when the page loads */
+    padding: 60px 40px; /* Adds padding around the form for spacing */
+    text-align: center; /* Centers the text inside the container */
+    background-color: #ffffff; /* Sets background color to white */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Adds a shadow for a floating effect */
+    max-width: 700px; /* Sets a maximum width for the container */
+    margin: 60px auto; /* Centers the container horizontally and adds vertical space */
+    border-radius: 20px; /* Rounds the corners for a softer look */
+    background: linear-gradient(145deg, #fff, #f0f4f7); /* Adds a soft gradient for a more appealing background */
+    animation: fadeIn 1s ease-in-out; /* Fades the container into view */
 }
 
+/* Styling for the main heading of the contact section */
 .contact-title {
-    font-size: 3rem; /* Large font size for the title */
-    color: #001f3f; /* Dark blue color for the title */
-    margin-bottom: 20px; /* Adds space below the title */
-    animation: fadeUp 1.2s ease; /* The title slides up and fades in */
+    font-size: 3.5rem; /* Large font size for emphasis */
+    color: #001f3f; /* Dark blue color for contrast */
+    margin-bottom: 20px; /* Adds space below the heading */
+    animation: fadeUp 1.2s ease; /* Animation to fade the heading in and move it upwards */
 }
 
+/* Styling for the description text in the contact section */
 .contact-description {
-    font-size: 1.2rem; /* Sets a medium size for the description text */
+    font-size: 1.3rem; /* Sets font size for the description */
     margin-bottom: 40px; /* Adds space below the description */
-    color: #666; /* Sets the text color to light gray */
-    animation: fadeUp 1.4s ease; /* The description slides up and fades in */
+    color: #666; /* Sets text color to a medium gray */
+    animation: fadeUp 1.4s ease; /* Animation to fade the description in and move it upwards */
 }
 
+/* Styling for the contact form */
 .contact-form {
-    display: flex; /* Flexbox is used to arrange form fields */
-    flex-direction: column; /* Aligns the form fields vertically (one under the other) */
-    gap: 20px; /* Adds space between each form field */
-    animation: fadeUp 1.6s ease; /* The form fields slide up and fade in */
+    display: flex; /* Flexbox layout for form elements */
+    flex-direction: column; /* Aligns elements vertically */
+    gap: 25px; /* Adds spacing between form elements */
+    animation: fadeUp 1.6s ease; /* Animation to fade the form in and move it upwards */
 }
 
+/* Styling for form labels */
 .form-group label {
-    font-weight: 600; /* Makes the labels bold */
-    color: #001f3f; /* Dark blue color for the labels */
+    font-weight: 600; /* Makes the label text bold */
+    color: #001f3f; /* Dark blue color for labels */
+    font-size: 1.2rem; /* Sets font size for labels */
 }
 
+/* Styling for input fields and textarea */
 .form-group input, .form-group textarea {
-    width: 100%; /* Makes the input fields and textarea take up the full width of the form */
-    padding: 10px 15px; /* Adds padding inside the input fields */
-    font-size: 1rem; /* Sets the font size inside the input fields */
-    border-radius: 5px; /* Rounds the corners of the input fields */
-    border: 1px solid #ccc; /* Light gray border around the input fields */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transitions when input fields are focused */
+    width: 100%; /* Takes the full width of the container */
+    padding: 15px 20px; /* Adds padding inside the input for better usability */
+    font-size: 1rem; /* Sets font size for input text */
+    border-radius: 10px; /* Rounds the corners for a softer look */
+    border: 1px solid #ccc; /* Adds a light gray border */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effect */
 }
 
+/* Focus effect for input fields and textarea */
 .form-group input:focus, .form-group textarea:focus {
-    border-color: #5290f9; /* Changes the border color to light blue when the input field is focused */
-    box-shadow: 0 0 8px rgba(82, 144, 249, 0.2); /* Adds a subtle glowing shadow around the input field when focused */
+    border-color: #ffcb05; /* Changes border color to yellow when focused */
+    box-shadow: 0 0 8px rgba(255, 203, 5, 0.3); /* Adds a glow effect when focused */
 }
 
+/* Specific styling for textarea */
 textarea {
     height: 150px; /* Sets a fixed height for the textarea */
-    resize: none; /* Disables the ability to resize the textarea */
+    resize: none; /* Prevents resizing of the textarea */
 }
 
+/* Styling for the submit button */
 .submit-btn {
-    background-color: #5290f9; /* Light blue background color for the submit button */
-    color: #ffffff; /* White text color for the submit button */
-    border: none; /* Removes any borders from the button */
-    padding: 15px 30px; /* Adds padding inside the button */
-    font-size: 1.2rem; /* Sets the font size for the button text */
-    text-transform: uppercase; /* Makes the button text all uppercase */
-    cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the button */
-    border-radius: 5px; /* Rounds the button's corners */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions when the button is hovered */
+    background: linear-gradient(135deg, #001f3f, #004080); /* Dark blue gradient background */
+    color: #ffffff; /* Sets text color to white */
+    border: none; /* Removes default border */
+    padding: 15px 30px; /* Adds padding for button size */
+    font-size: 1.2rem; /* Sets font size for button text */
+    text-transform: uppercase; /* Converts text to uppercase */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    border-radius: 10px; /* Rounds the corners for a softer look */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
 
+/* Hover effect for the submit button */
 .submit-btn:hover {
-    background-color: #001f3f; /* Changes the background color to dark blue when hovered */
-    transform: scale(1.05); /* Slightly increases the size of the button when hovered */
+    background: #ffcb05; /* Changes background color to yellow */
+    transform: scale(1.05); /* Slightly increases the size of the button */
 }
 
-/* Footer Styling */
+/* Styling for the footer section */
 footer {
-    background-color: #001f3f; /* Dark blue background for the footer */
-    color: #ffffff; /* White text color in the footer */
-    padding: 40px 20px; /* Adds padding inside the footer */
-    display: flex; /* Flexbox is used to arrange footer content */
-    justify-content: space-around; /* Spreads the footer sections evenly */
-    flex-wrap: wrap; /* Wraps the sections to a new line on smaller screens */
+    background: #001f3f; /* Dark blue background */
+    color: #ffffff; /* Sets text color to white */
+    padding: 40px 20px; /* Adds padding for spacing around the footer */
+    text-align: center; /* Centers the text */
 }
 
-footer h2 {
-    font-size: 1.5rem; /* Sets the size of the footer section titles */
-    margin-bottom: 15px; /* Adds space below the footer section titles */
-}
-
-footer ul, footer p {
-    margin-bottom: 20px; /* Adds space below each footer list or paragraph */
-}
-
+/* Styling for links inside the footer */
 footer a {
-    color: #ffffff; /* White color for the footer links */
-    text-decoration: none; /* Removes the underline from footer links */
+    color: #ffffff; /* Sets link color to white */
+    text-decoration: none; /* Removes underline from links */
 }
 
+/* Hover effect for footer links */
 footer a:hover {
-    color: #5290f9; /* Changes the link color to light blue when hovered */
+    color: #ffcb05; /* Changes link color to yellow on hover */
 }
 
-.social-media a {
-    font-size: 2rem; /* Makes the social media icons larger */
-    margin: 0 10px; /* Adds space between the social media icons */
-    transition: color 0.3s ease; /* Smooth transition when the icon is hovered */
-}
-
-.social-media a:hover {
-    color: #5290f9; /* Changes the social media icon color to light blue when hovered */
-}
-
-/* Animations */
-/* Slide up animation for elements */
+/* Animation for elements to fade and move upwards */
 @keyframes fadeUp {
     0% {
-        opacity: 0; /* Element is initially invisible */
-        transform: translateY(30px); /* Element is positioned 30px lower than its final position */
+        opacity: 0; /* Starts fully transparent */
+        transform: translateY(30px); /* Starts below original position */
     }
     100% {
-        opacity: 1; /* Element becomes fully visible */
-        transform: translateY(0); /* Element is in its final position */
+        opacity: 1; /* Ends fully visible */
+        transform: translateY(0); /* Ends in original position */
     }
 }
 
-/* Fade in animation for elements */
+/* Animation for elements to fade in */
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Element is initially invisible */
+        opacity: 0; /* Starts fully transparent */
     }
     100% {
-        opacity: 1; /* Element becomes fully visible */
+        opacity: 1; /* Ends fully visible */
     }
 }
 
-/* Responsive Styling */
-/* When the screen width is less than 768px (tablet or smaller), apply the following styles */
+/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
     .contact-container {
-        padding: 40px 20px; /* Reduce padding inside the contact form for smaller screens */
+        padding: 40px 20px; /* Reduces padding for smaller screens */
     }
 
-  footer {
-    display: flex;
-    background-color: #000;
-    color: #fff;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: auto;
-  }
+    .contact-title {
+        font-size: 2.5rem; /* Reduces font size for better fit on smaller screens */
+    }
+
+    .contact-description {
+        font-size: 1.1rem; /* Reduces font size for better readability */
+    }
+
+    footer {
+        padding: 20px; /* Reduces padding for the footer on smaller screens */
+    }
+}

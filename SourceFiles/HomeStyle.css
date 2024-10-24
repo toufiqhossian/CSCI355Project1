@@ -1,286 +1,507 @@
-@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import Google Fonts for sleek typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 /* Global Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Removes default margin for all elements */
+  padding: 0; /* Removes default padding for all elements */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
-/* Body */
+/* Body Styling */
 body {
-  background-color: #f4f7f9; /* Light background for overall clean look */
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  overflow-x: hidden;
+  background: linear-gradient(135deg, #eef6ff, #1e90ff); /* Gradient background from light blue to deeper blue */
+  font-family: 'Roboto', sans-serif; /* Using the imported Roboto font for modern typography */
+  color: #333; /* Dark gray color for main text to improve readability */
+  overflow-x: hidden; /* Prevents horizontal scrolling on small screens */
+  transition: background 3s ease-in-out; /* Smooth transition for background color changes */
 }
 
 /* Header Section */
 header {
-  background-color: white; /* White background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a neat look */
-  padding: 15px 30px;
+  position: fixed; /* Keeps the header at the top of the viewport */
+  top: 0;
+  width: 100%; /* Header takes full width of the page */
+  z-index: 1000; /* Places the header above other elements */
+  padding: 20px 50px; /* Padding around the header content for spacing */
+  background-color: rgba(10, 26, 42, 0.9); /* Semi-transparent dark background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow to create a floating effect */
+  transition: background-color 0.5s ease, padding 0.3s ease; /* Smooth transition for background and padding changes */
+  backdrop-filter: blur(10px); /* Adds a blur effect for a glassy look */
 }
 
+/* Header style when the user scrolls down */
+header.scrolled {
+  background-color: rgba(0, 15, 35, 0.95); /* Darker background when scrolled */
+  padding: 10px 40px; /* Reduced padding for a compact look */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more noticeable effect */
+}
+
+/* Container for header elements */
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Distributes space between children */
+  align-items: center; /* Aligns items vertically in the center */
 }
 
-.logo-and-title {
-  display: flex;
-  align-items: center;
-}
-
+/* Logo Styling */
 .logo-and-title .logo {
-  height: 50px; /* Adjust as needed */
-  margin-right: 10px;
+  height: 60px; /* Sets the height for the logo image */
+  margin-right: 15px; /* Adds space between the logo and the title */
+  animation: spinLogo 20s infinite linear; /* Adds a slow spinning animation to the logo */
 }
 
-header h1 {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100; /* Thin font weight */
-  margin: 0;
+/* Keyframes for logo spinning animation */
+@keyframes spinLogo {
+  0% {
+    transform: rotate(0deg); /* Start rotation at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End rotation at 360 degrees */
+  }
 }
 
+/* Navigation bar styling */
 nav#nav {
-  flex: 1;
-  text-align: center;
+  display: flex; /* Flex layout for navigation links */
+  justify-content: center; /* Centers the links */
+  align-items: center; /* Aligns the links vertically */
+  gap: 30px; /* Spacing between navigation links */
 }
 
+/* Navigation links styling */
 nav#nav a {
-  color: #001f3f; /* Set dark blue for all links */
-  font-size: 16px;
-  text-decoration: none; /* Remove underlines */
-  margin: 0 15px;
-  transition: color 0.3s ease;
+  font-size: 1.2rem; /* Sets the font size for links */
+  color: white; /* White text color for contrast */
+  text-transform: uppercase; /* Converts text to uppercase */
+  font-weight: 700; /* Bold text for emphasis */
+  letter-spacing: 0.1rem; /* Adds space between letters */
+  position: relative; /* Needed for the pseudo-element styling */
+  transition: transform 0.4s ease, color 0.4s ease; /* Smooth transition for hover effects */
+  padding: 10px 15px; /* Adds padding for larger clickable area */
+  border-radius: 8px; /* Rounds the corners for a softer look */
 }
 
+/* Hover effect for navigation links */
 nav#nav a:hover {
-  color: #5290f9; /* Accent color for hover */
+  color: #fffa65; /* Changes text color to bright yellow on hover */
+  transform: translateY(-5px) scale(1.15); /* Moves and scales link slightly for visual effect */
+  box-shadow: 0 8px 15px rgba(255, 250, 101, 0.4); /* Adds a shadow effect for emphasis */
 }
 
+/* Underline effect when hovering over navigation links */
+nav#nav a::after {
+  content: ''; /* Empty content to create underline */
+  position: absolute; /* Positions relative to the link */
+  width: 0; /* Initially no width */
+  height: 4px; /* Sets underline thickness */
+  background-color: #fffa65; /* Yellow color for underline */
+  bottom: -8px; /* Positions underline below the link */
+  left: 0;
+  transition: width 0.4s ease-in-out; /* Smooth transition to increase width */
+}
+
+/* Expands the underline when hovering */
+nav#nav a:hover::after {
+  width: 100%; /* Full width underline */
+}
+
+/* Click effect for navigation links */
+nav#nav a:active {
+  animation: rippleEffect 0.6s ease-out; /* Ripple effect when link is clicked */
+}
+
+/* Keyframes for ripple effect animation */
+@keyframes rippleEffect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 250, 101, 0.6); /* Starts with no shadow */
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 250, 101, 0); /* Expands shadow and fades */
+  }
+}
+
+/* Burger menu styling for mobile devices */
+.burger-menu {
+  display: none; /* Initially hidden, only shown on small screens */
+  color: white; /* White color for visibility */
+  font-size: 2rem; /* Font size for better visibility */
+  cursor: pointer; /* Pointer cursor to indicate clickability */
+}
+
+/* Cart icon styling with hover effect */
 .cart-icon {
-  color: #001f3f;
+  color: white; /* Sets icon color to white */
+  font-size: 1.8rem; /* Sets icon size */
+  transition: transform 0.3s ease; /* Smooth transform effect */
 }
 
-.cart-icon i {
-  font-size: 30px; /* Increase size */
+/* Hover effect for cart icon */
+.cart-icon:hover {
+  transform: scale(1.3) rotate(-20deg); /* Increases size and rotates slightly */
+  color: #fffa65; /* Changes color to yellow */
 }
 
-/* Hero Section */
-.hero {
-  background-color: #f4f7f9; /* Lighter hero section background */
-  padding: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: #001f3f; /* Dark Blue */
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.cta-btn {
-  background-color: #5290f9;
-  color: white;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #001f3f;
-  transform: scale(1.05);
-}
-
-/* Shop Section */
-.shop {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 60px 40px;
-  background-color: white; /* White background for product section */
-}
-
-.item {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-bottom: 1px solid #f4f7f9;
-  transition: transform 0.3s ease;
-}
-
-.item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.item:hover img {
-  transform: scale(1.1); /* Zooms in image slightly */
-}
-
-.item h3 {
-  font-size: 1.5rem;
-  margin: 15px 0;
-}
-
-.item p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.item .price-quantity {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.item .price-quantity h2 {
-  font-size: 1.5rem;
-  color: #001f3f; /* Dark Blue for price */
-}
-
-.item .buttons {
-  display: flex;
-  align-items: center;
-}
-
-.item .buttons i {
-  font-size: 20px;
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-.item .quantity {
-  font-size: 1rem;
-  margin: 0 10px;
-}
-
-/* Testimonials Section */
-.testimonials {
-  background-color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  color: #001f3f;
-  margin-bottom: 40px;
-}
-
-.testimonial-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.testimonial {
-  background-color: #f4f7f9;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 300px;
-}
-
-.testimonial p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.testimonial h3 {
-  font-size: 1.1rem;
-  color: #001f3f;
-}
-
-/* Footer */
-footer {
-  background-color: #001f3f; /* Dark Blue background */
-  color: white;
-  padding: 40px;
-  text-align: center;
-}
-
-footer h2 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content section {
-  margin-bottom: 20px;
-}
-
-.footer-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-content ul li {
-  margin-bottom: 10px;
-}
-
-/* Responsive Styles */
+/* Responsive styling for burger menu on mobile devices */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  .burger-menu {
+    display: block; /* Shows burger menu on smaller screens */
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
+  nav#nav {
+    display: none; /* Hides the navigation bar initially on small screens */
   }
 
-  .shop {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  nav#nav.active {
+    display: flex; /* Shows navigation when burger menu is clicked */
+    flex-direction: column; /* Vertical layout for links */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 31, 63, 0.95); /* Semi-transparent dark background */
+    width: 100%; /* Full width for better visibility */
+    gap: 15px;
+    padding: 20px;
   }
 
-  .testimonial-container {
-    flex-direction: column;
-    align-items: center;
+  nav#nav a {
+    font-size: 1.5rem; /* Larger font size for easier touch targets */
+    padding: 15px; /* Increases padding for better usability */
+    text-align: center; /* Centers text */
+    border-radius: 10px; /* Rounds the corners for consistency */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+
+  nav#nav a:hover {
+    background-color: #fffa65; /* Changes background to yellow on hover */
+    color: #001f3f; /* Changes text color to dark blue */
+  }
+}
+
+/* Hero Section Styling */
+.hero {
+  height: 100vh; /* Full viewport height for hero section */
+  background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)), url('/SourceFiles/CS355 Project images/blue_themed_tech_background.png') no-repeat center center/cover; /* Gradient overlay with a background image */
+  display: flex;
+  flex-direction: column; /* Column layout for content */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center; /* Centers text alignment */
+  color: white; /* White text for visibility */
+  overflow: hidden; /* Hides overflowing content */
+  position: relative;
+}
+
+/* Styling for the main title in hero section */
+.hero h1 {
+  font-size: 5rem; /* Large font size for emphasis */
+  font-weight: 700; /* Bold font weight */
+  letter-spacing: 0.2rem; /* Adds space between letters */
+  color: #fffa65; /* Yellow color for contrast */
+  animation: slideIn 2s ease-out forwards; /* Slide-in animation for visual interest */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0; /* Starts invisible */
+    transform: translateY(-100%); /* Moves down from above */
+  }
+  100% {
+    opacity: 1; /* Ends visible */
+    transform: translateY(0); /* Ends in original position */
+  }
+}
+
+/* Paragraph styling in hero section */
+.hero p {
+  font-size: 1.5rem; /* Sets font size for paragraph */
+  max-width: 800px; /* Restricts maximum width for readability */
+  margin-top: 20px; /* Adds space above paragraph */
+  color: #f1f1f1; /* Light gray color for text */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 2s 1s ease-out forwards; /* Fade-in animation with delay */
+}
+
+/* Call-to-action button styling */
+.cta-btn {
+  background-color: #ff6f61; /* Sets button background color */
+  color: white; /* Sets text color to white */
+  padding: 15px 45px; /* Padding for button size */
+  border-radius: 50px; /* Rounds button corners */
+  font-size: 1.3rem; /* Font size for button text */
+  margin-top: 30px; /* Adds space above button */
+  text-transform: uppercase; /* Converts text to uppercase */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+  animation: pulseButton 3s infinite alternate; /* Adds pulsing animation for visual interest */
+}
+
+/* Keyframes for pulsing button animation */
+@keyframes pulseButton {
+  0% {
+    transform: scale(1); /* Starts at normal size */
+  }
+  100% {
+    transform: scale(1.1); /* Grows slightly */
+  }
+}
+
+/* Hover effect for call-to-action button */
+.cta-btn:hover {
+  background-color: #1e90ff; /* Changes background color on hover */
+}
+
+/* About Section Styling */
+.about {
+  padding: 100px 40px; /* Padding for spacing around the section */
+  background: linear-gradient(to right, #001f3f, #1e90ff); /* Gradient background from dark blue to light blue */
+  color: white; /* White text color */
+  text-align: center; /* Centers text */
+}
+
+/* Content container for About section */
+.about-content {
+  max-width: 1200px; /* Restricts width for better readability */
+  margin: 0 auto; /* Centers content horizontally */
+  animation: slideUp 2s ease; /* Slide-up animation for visual interest */
+}
+
+/* Keyframes for slide-up animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0; /* Starts invisible */
+    transform: translateY(50px); /* Moves up from below */
+  }
+  100% {
+    opacity: 1; /* Ends visible */
+    transform: translateY(0); /* Ends in original position */
+  }
+}
+
+/* Heading styling for About section */
+.about h2 {
+  font-size: 3rem; /* Sets font size for heading */
+  color: #fffa65; /* Yellow color for contrast */
+  text-transform: uppercase; /* Converts text to uppercase */
+}
+
+/* Icon container in About section */
+.about-icons {
+  display: flex; /* Flexbox for layout */
+  gap: 20px; /* Spacing between icons */
+  justify-content: center; /* Centers icons horizontally */
+}
+
+/* Individual icon styling */
+.about-icon {
+  text-align: center; /* Centers text below icons */
+}
+
+/* Icon style for About section */
+.about-icon i {
+  font-size: 3rem; /* Sets icon size */
+  color: #fffa65; /* Yellow color for contrast */
+  margin-bottom: 10px; /* Adds space below icon */
+  animation: iconFloat 6s infinite alternate; /* Floating animation for visual interest */
+}
+
+/* Keyframes for floating animation */
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0); /* Starts and ends in the original position */
+  }
+  50% {
+    transform: translateY(-20px); /* Moves icon up */
+  }
+}
+
+/* Paragraph styling below icons in About section */
+.about-icon p {
+  font-size: 1.2rem; /* Sets font size for paragraph */
+}
+
+/* Testimonials Section Styling */
+.testimonials {
+  background: #001f3f; /* Dark blue background for contrast */
+  padding: 100px 20px; /* Padding for spacing around the section */
+  color: #fff; /* White text color */
+  text-align: center; /* Centers text */
+}
+
+/* Heading styling for Testimonials section */
+.testimonials h2 {
+  font-size: 3rem; /* Sets font size for heading */
+  color: #fffa65; /* Yellow color for contrast */
+  text-shadow: 0 0 10px #fffa65; /* Adds glow effect to text */
+  margin-bottom: 40px; /* Adds space below heading */
+}
+
+/* Container for individual testimonials */
+.testimonial-container {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Allows wrapping of testimonials to new lines */
+  gap: 20px; /* Spacing between testimonials */
+  justify-content: center; /* Centers testimonials horizontally */
+}
+
+/* Styling for each individual testimonial */
+.testimonial {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for effect */
+  padding: 30px; /* Padding inside testimonial box */
+  border-radius: 10px; /* Rounds corners for a softer look */
+  width: 300px; /* Fixed width for consistency */
+  text-align: center; /* Centers text within the testimonial */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+  transform: rotateY(20deg) translateX(0); /* Adds a slight 3D rotation */
+  transition: transform 0.8s ease, box-shadow 0.4s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for testimonial boxes */
+.testimonial:hover {
+  transform: rotateY(0deg) translateX(10px); /* Removes rotation and moves slightly to the right */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Deepens shadow for emphasis */
+}
+
+/* Paragraph styling within testimonial */
+.testimonial p {
+  font-size: 1.2rem; /* Sets font size for paragraph */
+  color: white; /* White text color */
+  margin-bottom: 20px; /* Adds space below paragraph */
+}
+
+/* Author styling within testimonial */
+.testimonial h3 {
+  font-size: 1.4rem; /* Sets font size for author name */
+  color: #fffa65; /* Yellow color for contrast */
+}
+
+/* Footer Section Styling */
+footer {
+  background: linear-gradient(135deg, #001f3f, #000428); /* Gradient background for footer */
+  padding: 100px 20px; /* Padding for spacing around the section */
+  color: white; /* White text color */
+  text-align: center; /* Centers text */
+  position: relative;
+  overflow: hidden; /* Hides overflowing content */
+}
+
+/* Footer content container */
+footer .footer-content {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Distributes space between children */
+  flex-wrap: wrap; /* Wraps elements on smaller screens */
+  max-width: 1200px; /* Restricts width for better readability */
+  margin: 0 auto; /* Centers content horizontally */
+}
+
+/* Individual section within footer */
+footer section {
+  flex: 1; /* Takes equal space within footer */
+  min-width: 200px; /* Minimum width to avoid collapsing */
+  padding: 20px; /* Padding inside the section */
+}
+
+/* Footer heading styling */
+footer section h2 {
+  color: #fffa65; /* Yellow color for contrast */
+  margin-bottom: 15px; /* Adds space below heading */
+  font-size: 2rem; /* Sets font size for heading */
+  text-transform: uppercase; /* Converts text to uppercase */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for emphasis */
+}
+
+/* Footer unordered list styling */
+footer ul {
+  list-style: none; /* Removes default bullet points */
+}
+
+/* List item styling in footer */
+footer ul li {
+  margin: 10px 0; /* Adds vertical spacing between list items */
+}
+
+/* Footer link styling */
+footer ul li a {
+  color: #ffffff; /* White text color */
+  text-decoration: none; /* Removes default underline */
+  font-size: 1.2rem; /* Sets font size for links */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for footer links */
+footer ul li a:hover {
+  color: #fffa65; /* Changes color to yellow on hover */
+  transform: translateX(10px); /* Moves slightly to the right */
+}
+
+/* Footer icons styling for social media */
+.footer-icons {
+  margin-top: 20px; /* Adds space above icons */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Centers icons horizontally */
+  gap: 15px; /* Spacing between icons */
+}
+
+/* Styling for individual footer icon links */
+.footer-icons a {
+  color: #ffffff; /* White icon color */
+  font-size: 2rem; /* Sets size for icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for footer icons */
+.footer-icons a:hover {
+  color: #fffa65; /* Changes color to yellow on hover */
+  transform: scale(1.2); /* Enlarges icon slightly */
+}
+
+/* Wave effect decoration in footer */
+.footer-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('wave.svg') repeat-x; /* Repeated wave background image */
+  animation: waveAnimation 10s linear infinite; /* Wave movement animation */
+}
+
+/* Keyframes for wave animation */
+@keyframes waveAnimation {
+  0% {
+    background-position-x: 0; /* Starts at position 0 */
+  }
+  100% {
+    background-position-x: 1000px; /* Moves background to the right */
+  }
+}
+
+/* Footer bottom text styling */
+.footer-bottom {
+  margin-top: 50px; /* Adds space above footer bottom text */
+  font-size: 1rem; /* Sets font size for bottom text */
+  color: #aaa; /* Light gray color for text */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Adds shadow for emphasis */
+}
+
+/* Rotating decoration in footer */
+footer .footer-decoration {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem; /* Sets size for decoration */
+  color: rgba(255, 250, 101, 0.2); /* Light yellow color for subtle effect */
+  animation: rotateDecoration 20s linear infinite; /* Rotating animation */
+}
+
+/* Keyframes for rotating decoration */
+@keyframes rotateDecoration {
+  0% {
+    transform: translateX(-50%) rotate(0deg); /* Starts without rotation */
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg); /* Ends with full rotation */
   }
 }

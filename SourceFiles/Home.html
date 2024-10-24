@@ -1,106 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Setting the document type as HTML5 and specifying the language as English -->
   <meta charset="UTF-8">
+  <!-- Ensures proper scaling on all devices for better responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EGGTech - Elevating Your Tech</title>
 
-  <!-- External CSS -->
+  <!-- Link to an external CSS file for custom styling -->
   <link rel="stylesheet" href="HomeStyle.css">
 
-  <!-- Bootstrap Icons for cart and other icons -->
+  <!-- Link to Bootstrap Icons library for using various icons on the website -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-  <!-- Header Section -->
-  <header>
+  <!-- Header Section for the website, includes navigation and branding -->
+  <header id="main-header">
     <div class="header-container">
+      <!-- Logo and title section -->
       <div class="logo-and-title">
-        <img src="EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
+        <!-- Logo image for the brand EGGTech, with alt text for accessibility -->
+        <img src="/SourceFiles/CS355 Project images/EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
+        <!-- Main heading for the brand, displayed prominently in the header -->
         <h1>EGGTech</h1>
       </div>
+      <!-- Navigation bar to help users move between pages on the website -->
       <nav id="nav" aria-label="Main Navigation">
+        <!-- Anchor tags to link to different pages of the website -->
         <a href="Home.html">Home</a>
         <a href="sale.html">Sale</a>
+        <a href="about-us.html">About</a>
         <a href="contact-us.html">Contact Us</a>
       </nav>
+      <!-- Link to the shopping cart page, represented by a cart icon -->
       <a href="cart.html" class="cart-icon">
+        <!-- Cart icon provided by Bootstrap Icons library -->
         <i class="bi bi-cart4" aria-label="Cart Icon"></i>
       </a>
+      <!-- Burger menu icon for mobile navigation, used to toggle menu visibility on smaller screens -->
+      <div class="burger-menu" id="burger-menu">
+        <i class="bi bi-list"></i>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section that captures the main attention of users when they land on the website -->
   <main class="hero">
     <div class="hero-content">
+      <!-- Main welcoming message to introduce users to EGGTech -->
       <h1>Welcome to EGGTech</h1>
+      <!-- Short paragraph explaining what users can expect from EGGTech -->
       <p>Discover cutting-edge tech at unbeatable prices, designed to elevate your digital life!</p>
+      <!-- Call-to-action button that directs users to the sale page -->
       <a href="sale.html" class="cta-btn">Shop Now</a>
+    </div>
+    <!-- Floating icons representing technology; these icons add an engaging visual element -->
+    <div class="floating-tech-animations">
+      <div class="tech-icon" id="tech-icon1"></div>
+      <div class="tech-icon" id="tech-icon2"></div>
+      <div class="tech-icon" id="tech-icon3"></div>
     </div>
   </main>
 
-  <!-- Shop Section -->
-  <section class="shop" id="shop">
-    <!-- First Product: Computer Keyboard -->
-    <div class="item" data-id="keyboard">
-      <img src="/SourceFiles/CS355 Project images/pexels-olenkabohovyk-1772123.jpg" alt="keyboard">
-      <div class="details">
-        <h3>Computer Keyboard</h3>
-        <p>Sleek, responsive, and designed for professionals.</p>
-        <div class="price-quantity">
-          <h2>$45</h2>
-          <div class="buttons">
-            <i class="bi bi-dash-lg decrease"></i>
-            <div class="quantity">0</div>
-            <i class="bi bi-plus-lg increase"></i>
-          </div>
-        </div>
-        <button class="add-to-cart-btn" style="display: none;">Add to Cart</button>
+  <!-- About Section providing information about EGGTech -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="about-info">
+        <!-- Heading for the About section -->
+        <h2>About EGGTech</h2>
+        <!-- Paragraph describing the mission and values of EGGTech -->
+        <p>At EGGTech, we’re passionate about bringing you the latest innovations in technology. From top-tier gadgets to everyday tech essentials, we ensure quality and performance with every product.</p>
       </div>
-    </div>
-
-    <!-- Second Product: Nikon Camera -->
-    <div class="item" data-id="camera">
-      <img src="/SourceFiles/CS355 Project images/pexels-pixabay-51383.jpg" alt="nikon">
-      <div class="details">
-        <h3>Nikon Camera</h3>
-        <p>Powerful, precise, and crafted for professionals.</p>
-        <div class="price-quantity">
-          <h2>$22</h2>
-          <div class="buttons">
-            <i class="bi bi-dash-lg decrease"></i>
-            <div class="quantity">0</div>
-            <i class="bi bi-plus-lg increase"></i>
-          </div>
+      <div class="about-icons">
+        <!-- Icons representing core values of the company: Innovation, Quality, Community -->
+        <div class="about-icon">
+          <!-- Lightning icon to symbolize innovation -->
+          <i class="bi bi-lightning-fill"></i>
+          <p>Innovation</p>
         </div>
-        <button class="add-to-cart-btn" style="display: none;">Add to Cart</button>
-      </div>
-    </div>
-
-    <!-- Third Product: Lightning Cable -->
-    <div class="item" data-id="lightning">
-      <img src="/SourceFiles/CS355 Project images/pexels-didsss-1643753.jpg" alt="lightning">
-      <div class="details">
-        <h3>Lightning Cable</h3>
-        <p>Compact, durable, and built for speed.</p>
-        <div class="price-quantity">
-          <h2>$22</h2>
-          <div class="buttons">
-            <i class="bi bi-dash-lg decrease"></i>
-            <div class="quantity">0</div>
-            <i class="bi bi-plus-lg increase"></i>
-          </div>
+        <div class="about-icon">
+          <!-- Shield icon to symbolize quality and reliability -->
+          <i class="bi bi-shield-fill-check"></i>
+          <p>Quality</p>
         </div>
-        <button class="add-to-cart-btn" style="display: none;">Add to Cart</button>
+        <div class="about-icon">
+          <!-- People icon to symbolize community and customer focus -->
+          <i class="bi bi-people-fill"></i>
+          <p>Community</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
+  <!-- Testimonials Section where customers share their experiences with EGGTech -->
   <section class="testimonials">
+    <!-- Heading for the Testimonials section -->
     <h2>What Our Customers Say</h2>
     <div class="testimonial-container">
+      <!-- Individual testimonials from satisfied customers -->
       <div class="testimonial">
         <p>"EGGTech has transformed my workflow. The products are top-notch!"</p>
         <h3>- Alex Johnson</h3>
@@ -116,31 +114,29 @@
     </div>
   </section>
 
-  <!-- Footer Section -->
+  <!-- Footer Section containing additional links and company information -->
   <footer>
     <div class="footer-content">
-      <!-- First section: Get Help links -->
+      <!-- Section for providing helpful links to customers -->
       <section>
         <h2>Get Help</h2>
         <ul>
+          <!-- Links to the help center, FAQs, and contact page for customer support -->
           <li><a href="help-center.html">Help Center</a></li>
           <li><a href="faq.html">FAQs</a></li>
-          <li><a href="order-status.html">Order Status</a></li>
-          <li><a href="credit-card.html">EGGTech Credit Card</a></li>
-          <li><a href="returns.html">Returns</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
       </section>
 
-      <!-- Second section: Owners of the company -->
+      <!-- Section listing the team members involved in the company -->
       <section>
-        <h2>Owners</h2>
-        <p>Roni Mikhaylov, Esteban Mesa, Hannah Zahler, T, Jin,</p>
-        <!-- Add other names here -->
+        <h2>Company</h2>
+        <p>Roni Mikhaylov, Esteban Mesa, Hannah Zahler, T, Jin</p>
       </section>
     </div>
   </footer>
 
-  <!-- External JS -->
+  <!-- External JavaScript file to handle interactions on the website -->
   <script src="HomeScript.js"></script>
 </body>
 </html>
