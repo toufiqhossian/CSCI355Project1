@@ -321,60 +321,97 @@ nav#nav a:active {
   font-size: 1.2rem; /* Sets font size for paragraph */
 }
 
-/* Testimonials Section Styling */
-.testimonials {
-  background: #001f3f; /* Dark blue background for contrast */
-  padding: 100px 20px; /* Padding for spacing around the section */
-  color: #fff; /* White text color */
-  text-align: center; /* Centers text */
+
+
+section.border {
+  background: rgb(63, 96, 146);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-size: 150%;
+  text-align: center;
+  height: 60px;
+
 }
 
-/* Heading styling for Testimonials section */
-.testimonials h2 {
-  font-size: 3rem; /* Sets font size for heading */
-  color: #fffa65; /* Yellow color for contrast */
-  text-shadow: 0 0 10px #fffa65; /* Adds glow effect to text */
-  margin-bottom: 40px; /* Adds space below heading */
-}
-
-/* Container for individual testimonials */
 .testimonial-container {
-  display: flex; /* Flexbox for layout */
-  flex-wrap: wrap; /* Allows wrapping of testimonials to new lines */
-  gap: 20px; /* Spacing between testimonials */
-  justify-content: center; /* Centers testimonials horizontally */
+  background-color: #4883cf;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  color: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 50px 80px;
+  max-width: 768px;
+  position: relative;
 }
 
-/* Styling for each individual testimonial */
+.fa-quote {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+}
+
+.fa-quote-right {
+  left: 40px;
+}
+
+.fa-quote-left {
+  right: 40px;
+}
+
 .testimonial {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for effect */
-  padding: 30px; /* Padding inside testimonial box */
-  border-radius: 10px; /* Rounds corners for a softer look */
-  width: 300px; /* Fixed width for consistency */
-  text-align: center; /* Centers text within the testimonial */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
-  transform: rotateY(20deg) translateX(0); /* Adds a slight 3D rotation */
-  transition: transform 0.8s ease, box-shadow 0.4s ease; /* Smooth transition for hover effects */
+  line-height: 28px;
+  text-align: justify;
 }
 
-/* Hover effect for testimonial boxes */
-.testimonial:hover {
-  transform: rotateY(0deg) translateX(10px); /* Removes rotation and moves slightly to the right */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Deepens shadow for emphasis */
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Paragraph styling within testimonial */
-.testimonial p {
-  font-size: 1.2rem; /* Sets font size for paragraph */
-  color: white; /* White text color */
-  margin-bottom: 20px; /* Adds space below paragraph */
+.user .user-image {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
 }
 
-/* Author styling within testimonial */
-.testimonial h3 {
-  font-size: 1.4rem; /* Sets font size for author name */
-  color: #fffa65; /* Yellow color for contrast */
+.user .user-details {
+  margin-left: 10px;
 }
+
+.user .username {
+  margin: 0;
+}
+
+
+.progress-bar {
+  background-color: #fff;
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 20px 30px;
+  }
+
+  .fa-quote {
+    display: none;
+  }
+}
+
 
 /* Footer Section Styling */
 footer {
