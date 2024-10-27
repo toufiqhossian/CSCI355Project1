@@ -12,7 +12,7 @@
 body {
   background: linear-gradient(135deg, #eef6ff, #1e90ff); /* Gradient background from light blue to deeper blue */
   font-family: 'Roboto', sans-serif; /* Using the imported Roboto font for modern typography */
-  color: #333; /* Dark gray color for main text to improve readability */
+  color: white; /* Dark gray color for main text to improve readability */
   overflow-x: hidden; /* Prevents horizontal scrolling on small screens */
   transition: background 3s ease-in-out; /* Smooth transition for background color changes */
 }
