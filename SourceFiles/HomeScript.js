@@ -53,44 +53,44 @@ const testimonials = [
     photo:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
     text:
-      "CodingUniverse has transformed my career. The courses are comprehensive and perfectly catered to my needs.",
+      "EGGTech has become my go-to for tech advice and product comparisons!",
   },
   {
     name: 'June Cha',
     photo: 'https://randomuser.me/api/portraits/women/44.jpg',
     text:
-      'I\'m amazed at the quality of content on CodingUniverse. It\'s like having a personal mentor guiding you through complex topics.',
+      "Fantastic website for staying up-to-date with the latest tech trends.",
   },
   {
     name: 'Iida Niskanen',
     photo: 'https://randomuser.me/api/portraits/women/68.jpg',
     text:
-      'The flexibility of CodingUniverse\'s courses allowed me to learn at my own pace and make a career change I\'d always dreamed of.',
+      "EGGTech helped me find the perfect laptop within my budget!",
   },
   {
     name: 'Renee Sims',
     photo: 'https://randomuser.me/api/portraits/women/65.jpg',
     text:
-      'CodingUniverse\'s courses are a game-changer for my team. We\'ve upskilled and improved our productivity dramatically.',
+      "Customer service is top-notch!",
   },
   {
     name: 'Jonathan Nunfiez',
     photo: 'https://randomuser.me/api/portraits/men/43.jpg',
     text:
-      'I\'m a lone learner, and CodingUniverse has been my go-to for personal development. The courses are top-notch.',
+      "The best website for honest tech reviews.",
   },
   {
     name: 'Sasha Ho',
     photo:
       'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?h=350&auto=compress&cs=tinysrgb',
     text:
-      'Kudos to CodingUniverse for making high-quality education accessible. These courses have opened up new horizons for me.',
+      "EGGTech saved me so much time with their easy-to-follow guides!",
   },
   {
     name: 'Veeti Seppanen',
     photo: 'https://randomuser.me/api/portraits/men/97.jpg',
     text:
-      'CodingUniverse is my secret weapon for staying competitive in the tech industry. The courses keep me ahead of the curve.',
+      "EGGTech’s newsletter keeps me ahead of the curve!",
   },
 ];
 
