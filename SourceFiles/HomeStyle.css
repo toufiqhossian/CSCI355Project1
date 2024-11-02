@@ -631,3 +631,24 @@ footer .footer-decoration {
   transition: all 0.5s ease-in;
   font-size: 12px;
 }
+
+.cart-icon {
+  position: relative; /* Set relative positioning to allow bubble positioning */
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.cart-count {
+  background-color: #ffcb05; /* Bright yellow bubble color */
+  color: #333; /* Dark text color for contrast */
+  border-radius: 50%; /* Makes the bubble round */
+  padding: 3px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px; /* Adjust position relative to the cart icon */
+  right: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
