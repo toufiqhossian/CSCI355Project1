@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Setting the document type as HTML5 and specifying the language as English -->
+    <meta charset="UTF-8" />
+    <!-- Ensures proper scaling on all devices for better responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EGGTech - Elevating Your Tech</title>
+
+    <!-- Link to an external CSS file for custom styling -->
+    <link rel="stylesheet" href="HomeStyle.css" />
+
+    <!-- Link to Bootstrap Icons library for using various icons on the website -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section for the website, includes navigation and branding -->
+    <header id="main-header">
+      <div class="header-container">
+        <!-- Logo and title section -->
+        <div class="logo-and-title">
+          <!-- Logo image for the brand EGGTech, with alt text for accessibility -->
+          <img
+            src="/SourceFiles/CS355 Project images/EGGTech Logo.jpg"
+            alt="EGGTech Logo"
+            class="logo"
+          />
+          <!-- Main heading for the brand, displayed prominently in the header -->
+          <h1>EGGTech</h1>
+        </div>
+        <!-- Navigation bar to help users move between pages on the website -->
+        <nav id="nav" aria-label="Main Navigation">
+          <!-- Anchor tags to link to different pages of the website -->
+          <a href="Home.html">Home</a>
+          <a href="sale.html">Sale</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <!-- Link to the shopping cart page, represented by a cart icon -->
+        <a href="cart.html" class="cart-icon">
+          <!-- Cart icon provided by Bootstrap Icons library -->
+          <i class="bi bi-cart4" aria-label="Cart Icon"></i>
+        </a>
+        <div class="burger-menu" id="burger-menu">
+          <i class="bi bi-list"></i>
+        </div>
+        
+      </div>
+    </header>
+
+    <!-- Hero Section that captures the main attention of users when they land on the website -->
+    <main class="hero">
+      <div class="hero-content">
+        <!-- Main welcoming message to introduce users to EGGTech -->
+        <h1>Welcome to EGGTech</h1>
+        <!-- Short paragraph explaining what users can expect from EGGTech -->
+        <p>
+          Discover cutting-edge tech at unbeatable prices, designed to elevate
+          your digital life!
+        </p>
+        <!-- Call-to-action button that directs users to the sale page -->
+        <a href="sale.html" class="cta-btn">Shop Now</a>
+      </div>
+      <!-- Floating icons representing technology; these icons add an engaging visual element -->
+      <div class="floating-tech-animations">
+        <div class="tech-icon" id="tech-icon1"></div>
+        <div class="tech-icon" id="tech-icon2"></div>
+        <div class="tech-icon" id="tech-icon3"></div>
+      </div>
+    </main>
+
+    <!-- About Section providing information about EGGTech -->
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-info">
+          <!-- Heading for the About section -->
+          <h2>About EGGTech</h2>
+          <!-- Paragraph describing the mission and values of EGGTech -->
+          <p>
+            At EGGTech, we're passionate about bringing you the latest
+            innovations in technology. From top-tier gadgets to everyday tech
+            essentials, we ensure quality and performance with every product.
+          </p>
+        </div>
+        <div class="about-icons">
+          <!-- Icons representing core values of the company: Innovation, Quality, Community -->
+          <div class="about-icon">
+            <!-- Lightning icon to symbolize innovation -->
+            <i class="bi bi-lightning-fill"></i>
+            <p>Innovation</p>
+          </div>
+          <div class="about-icon">
+            <!-- Shield icon to symbolize quality and reliability -->
+            <i class="bi bi-shield-fill-check"></i>
+            <p>Quality</p>
+          </div>
+          <div class="about-icon">
+            <!-- People icon to symbolize community and customer focus -->
+            <i class="bi bi-people-fill"></i>
+            <p>Community</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border">
+      <div>Read the testimonials of our satisfied customers:</div>
+    </section>
+    <div class="testimonial-container">
+      <div class="progress-bar"></div>
+      <div class="fas fa-quote-right fa-quote"></div>
+      <div class="fas fa-quote-left fa-quote"></div>
+      <p class="testimonial">
+        "EGGTech has become my go-to for tech advice and product comparisons!"
+      </p>
+      <div class="user">
+        <img
+          src="https://randomuser.me/api/portraits/women/46.jpg"
+          alt="user"
+          class="user-image"
+        />
+        <div class="user-details">
+          <h4 class="username">Miyah Myles</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="clock-container">
+      <div class="clock">
+        <div class="needle hour"></div>
+        <div class="needle minute"></div>
+        <div class="needle second"></div>
+        <div class="center-point"></div>
+      </div>
+
+      <div class="time"></div>
+      <div class="date"></div>
+    </div>
+
+    <!-- Footer Section containing additional links and company information -->
+    <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <section>
+        <h2>Get Help</h2>
+        <ul>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="order-status.html">Order Status</a></li>
+          <li><a href="credit-card.html">EGGTech Credit Card</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Owners</h2>
+        <p>Roni Mikhaylov, Esteban Mesa, Toufiq Hossian, Jin, Hanz</p>
+      </section>
+    </div>
+  </footer>
+
+    <!-- External JavaScript file to handle interactions on the website -->
+    <script src="HomeScript.js"></script>
+  </body>
+</html>

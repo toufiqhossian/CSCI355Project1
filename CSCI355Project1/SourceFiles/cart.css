@@ -1,0 +1,206 @@
+/* Importing fonts and icon styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); /* Import Poppins font with specified weights */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'); /* Import Font Awesome icons */
+
+/* Global Styles */
+* {
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  margin: 0; /* Reset default margin for all elements */
+  padding: 0; /* Reset default padding for all elements */
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #80deea); /* Set a gradient background for the body */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for the entire body text */
+  color: #333; /* Set the default text color to a dark gray */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+/* Navigation Styles */
+nav {
+  display: flex; /* Use flexbox layout for navigation */
+  justify-content: space-between; /* Space out items evenly in the navigation bar */
+  align-items: center; /* Center items vertically in the navigation bar */
+  background-color: #004aad; /* Set a dark blue background color for the navigation */
+  padding: 20px; /* Add padding inside the navigation bar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect for depth */
+  position: fixed; /* Fix the navigation bar at the top of the page */
+  width: 100%; /* Make the navigation bar full width */
+  top: 0; /* Position the navigation bar at the top of the page */
+  z-index: 1000; /* Ensure the navigation bar is on top of other elements */
+}
+
+nav .logo h1 {
+  font-size: 2rem; /* Set the font size for the logo */
+  color: #ffffff; /* Set the logo text color to white */
+}
+
+nav ul {
+  list-style: none; /* Remove default bullet points from the list */
+  display: flex; /* Use flexbox layout for the navigation links */
+  align-items: center; /* Center items vertically in the list */
+}
+
+nav ul li {
+  margin-right: 30px; /* Add spacing between list items */
+  font-size: 1.1rem; /* Set font size for list items */
+}
+
+nav ul li a {
+  color: #ffffff; /* Set the link text color to white */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth transition for color changes on hover */
+}
+
+nav ul li a:hover {
+  color: #ffcb05; /* Change link color to yellow on hover */
+}
+
+/* Icon styles for mobile menu toggle */
+.icon {
+  display: none; /* Hide the icon by default (only shown on mobile) */
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) { /* Media query for devices with a max width of 768px (mobile) */
+  nav ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    position: absolute; /* Position the navigation links absolutely */
+    top: 80px; /* Position below the navigation bar */
+    left: -100%; /* Initially hide the menu off-screen to the left */
+    background-color: #004aad; /* Set background color for the mobile menu */
+    width: 100%; /* Make the mobile menu full width */
+    transition: 0.3s ease; /* Smooth transition for showing/hiding the menu */
+  }
+
+  nav ul.active {
+    left: 0; /* Bring the menu into view when active */
+  }
+
+  nav .icon {
+    display: block; /* Show the mobile menu toggle icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  .icon .line {
+    background-color: #ffffff; /* Set the color of the lines in the hamburger menu to white */
+    height: 3px; /* Set height of each line */
+    margin: 5px; /* Add space between lines */
+    width: 25px; /* Set width of each line */
+  }
+}
+
+/* Cart Container Styles */
+.cart-container {
+  margin-top: 100px; /* Add space at the top to avoid overlap with the fixed navigation */
+  padding: 50px 20px; /* Add padding inside the cart container */
+  background-color: #ffffff; /* Set background color to white for the cart */
+  min-height: 100vh; /* Ensure the container takes at least full viewport height */
+  animation: slideIn 1s ease-in-out; /* Apply a slide-in animation on load */
+}
+
+.cart-title {
+  font-size: 2.5rem; /* Set font size for the cart title */
+  font-weight: 600; /* Set font weight for the cart title */
+  text-align: center; /* Center the cart title */
+  color: #004aad; /* Set title color to the same blue used in the navigation */
+  margin-bottom: 20px; /* Add space below the title */
+}
+
+.cart-items {
+  display: block; /* Stack cart items vertically */
+}
+
+/* Individual Cart Item Styles */
+.cart-item {
+  display: flex; /* Use flexbox layout for each cart item */
+  align-items: center; /* Center items vertically within the cart item */
+  background-color: #f7f9fc; /* Set a light background color for each cart item */
+  padding: 15px; /* Add padding inside the cart item */
+  border-radius: 12px; /* Round the corners of the cart item */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  margin-bottom: 20px; /* Add space below each cart item */
+  width: 100%; /* Make cart items full width */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.cart-item:hover {
+  transform: translateY(-10px); /* Move the cart item up slightly on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+.cart-item img {
+  width: 100px; /* Set a fixed width for item images */
+  height: auto; /* Maintain aspect ratio for images */
+  border-radius: 8px; /* Round the corners of item images */
+  margin-right: 20px; /* Add space to the right of images */
+}
+
+.item-details h3 {
+  font-size: 1.4rem; /* Set font size for item names */
+  font-weight: 600; /* Set font weight for item names */
+  margin: 0 0 5px 0; /* Remove top margin and set bottom margin */
+}
+
+.item-details p {
+  font-size: 1.2rem; /* Set font size for item prices */
+  color: #007bff; /* Set a blue color for prices */
+}
+
+.item-quantity {
+  display: flex; /* Use flexbox layout for quantity controls */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Add space between controls */
+  margin-top: 10px; /* Add space above the quantity controls */
+}
+
+.item-quantity .fas {
+  cursor: pointer; /* Change cursor to pointer for clickable icons */
+  color: #007bff; /* Set color for increase/decrease icons */
+}
+
+.trash-icon {
+  color: #ff5252; /* Set color for the trash icon to red */
+  cursor: pointer; /* Change cursor to pointer for clickable icon */
+}
+
+/* Cart Summary Styles */
+.cart-summary {
+  text-align: center; /* Center text in the summary section */
+  margin-top: 50px; /* Add space above the summary section */
+}
+
+.cart-summary h2 {
+  font-size: 2rem; /* Set font size for the total amount */
+  color: #004aad; /* Set color for the total amount heading */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.checkout-btn {
+  background-color: #ffcb05; /* Set background color for the checkout button */
+  color: #004aad; /* Set text color for the checkout button */
+  padding: 15px 30px; /* Add padding inside the button */
+  font-size: 1.3rem; /* Set font size for the button text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Round the corners of the button */
+  cursor: pointer; /* Change cursor to pointer for the button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.checkout-btn:hover {
+  background-color: #ff9800; /* Change background color on hover */
+  transform: translateY(-5px); /* Move the button up slightly on hover */
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateY(30px); /* Start from below */
+  }
+  to {
+    opacity: 1; /* End with full opacity */
+    transform: translateY(0); /* Move to original position */
+  }
+}
