@@ -8,20 +8,35 @@
 </head>
   
 <body>
-  <header>
+  <header id="main-header">
     <div class="header-container">
+      <!-- Logo and title section -->
       <div class="logo-and-title">
-        <img src="EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
+        <!-- Logo image for the brand EGGTech, with alt text for accessibility -->
+        <img
+          src="/SourceFiles/CS355 Project images/EGGTech Logo.jpg"
+          alt="EGGTech Logo"
+          class="logo"
+        />
+        <!-- Main heading for the brand, displayed prominently in the header -->
         <h1>EGGTech</h1>
       </div>
+      <!-- Navigation bar to help users move between pages on the website -->
       <nav id="nav" aria-label="Main Navigation">
+        <!-- Anchor tags to link to different pages of the website -->
         <a href="Home.html">Home</a>
         <a href="sale.html">Sale</a>
         <a href="contact-us.html">Contact Us</a>
       </nav>
+      <!-- Link to the shopping cart page, represented by a cart icon -->
       <a href="cart.html" class="cart-icon">
+        <!-- Cart icon provided by Bootstrap Icons library -->
         <i class="bi bi-cart4" aria-label="Cart Icon"></i>
       </a>
+      <!-- Burger menu icon for mobile navigation, used to toggle menu visibility on smaller screens -->
+      <div class="burger-menu" id="burger-menu">
+        <i class="bi bi-list"></i>
+      </div>
     </div>
   </header>
 
@@ -115,25 +130,23 @@
     </form>
     </div>
 
- <footer>
-    <div class="footer-content">
-      <section>
-        <h2>Get Help</h2>
-        <ul>
-          <li><a href="help-center.html">Help Center</a></li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="order-status.html">Order Status</a></li>
-          <li><a href="credit-card.html">EGGTech Credit Card</a></li>
-          <li><a href="returns.html">Returns</a></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Owners</h2>
-        <p>Roni Mikhaylov, Esteban Mesa, Hannah Zahler, Toufiq Hossian, Jin,</p>
-      </section>
-    </div>
-  </footer>
+    <footer>
+      <div class="footer-content">
+        <section>
+          <h2>Get Help</h2>
+          <ul>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="order-status.html">Order Status</a></li>
+            <li><a href="credit-card.html">EGGTech Credit Card</a></li>
+            <li><a href="returns.html">Returns</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Owners</h2>
+          <p>Roni Mikhaylov, Esteban Mesa, Toufiq Hossian, Jin, Hanz</p>
+        </section>
+      </div>
+    </footer>
   <script src="credit-card.js"></script>
 </body>
 </html>
