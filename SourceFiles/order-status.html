@@ -4,77 +4,69 @@
     <meta charset="UTF-8" />
     <title>Order Status</title>
     <link rel="stylesheet" href="order-status.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
 
   <body>
-
-    <header id="main-header">
+    <!-- Updated Navbar -->
+    <header>
       <div class="header-container">
-        <!-- Logo and title section -->
         <div class="logo-and-title">
-          <!-- Logo image for the brand EGGTech, with alt text for accessibility -->
-          <img
-            src="/SourceFiles/CS355 Project images/EGGTech Logo.jpg"
-            alt="EGGTech Logo"
-            class="logo"
-          />
-          <!-- Main heading for the brand, displayed prominently in the header -->
+          <img src="/SourceFiles/CS355 Project images/EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
           <h1>EGGTech</h1>
         </div>
-        <!-- Navigation bar to help users move between pages on the website -->
-        <nav id="nav" aria-label="Main Navigation">
-          <!-- Anchor tags to link to different pages of the website -->
-          <a href="Home.html">Home</a>
+        <nav aria-label="Main Navigation">
+          <a href="home.html">Home</a>
           <a href="sale.html">Sale</a>
           <a href="contact-us.html">Contact Us</a>
+          <a href="cart.html" class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
         </nav>
-        <!-- Link to the shopping cart page, represented by a cart icon -->
-        <a href="cart.html" class="cart-icon">
-          <!-- Cart icon provided by Bootstrap Icons library -->
-          <i class="bi bi-cart4" aria-label="Cart Icon"></i>
-        </a>
-        <!-- Burger menu icon for mobile navigation, used to toggle menu visibility on smaller screens -->
-        <div class="burger-menu" id="burger-menu">
-          <i class="bi bi-list"></i>
-        </div>
       </div>
     </header>
 
     <div class="container">
-        <h1>Track Your Order</h1>
-        <form action="#" method="POST">
-          <div class="form-control">
-            <input type="text" id="orderNumber" name="orderNumber" required>
-            <label for="orderNumber">Order Number</label>
-          </div>
-  
-          <div class="form-control">
-            <input type="email" id="email" name="email" required>
-            <label for="email">Email Address</label>
-          </div>
-  
-          <button class="btn">Track Order</button>
-        </form>
-      </div>
-
-      <footer>
-        <div class="footer-content">
-          <section>
-            <h2>Get Help</h2>
-            <ul>
-              <li><a href="faq.html">FAQs</a></li>
-              <li><a href="order-status.html">Order Status</a></li>
-              <li><a href="credit-card.html">EGGTech Credit Card</a></li>
-              <li><a href="returns.html">Returns</a></li>
-            </ul>
-          </section>
-          <section>
-            <h2>Owners</h2>
-            <p>Roni Mikhaylov, Esteban Mesa, Toufiq Hossian, Jin, Hanz</p>
-          </section>
+      <h1>Track Your Order</h1>
+      <form action="#" method="POST">
+        <div class="form-control">
+          <input type="text" id="orderNumber" name="orderNumber" required>
+          <label for="orderNumber">Order Number</label>
         </div>
-      </footer>
+
+        <div class="form-control">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email Address</label>
+        </div>
+
+        <button class="btn">Track Order</button>
+      </form>
+    </div>
+
+    <!-- Updated Footer -->
+    <footer>
+      <div class="footer-content">
+        <section class="footer-section">
+          <h2>Get Help</h2>
+          <ul>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="order-status.html">Order Status</a></li>
+            <li><a href="credit-card.html">EGGTech Credit Card</a></li>
+            <li><a href="returns.html">Returns</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-section">
+          <h2>Owners</h2>
+          <p>Roni Mikhaylov, Esteban Mesa, Hannah Zahler, Toufiq Hossain, Jin</p>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 EGGTech - All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="order-status.js"></script>
   </body>
 </html>

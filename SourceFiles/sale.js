@@ -93,7 +93,7 @@ sendBtn.addEventListener('click', (e) => {
         <strong>Thank You!</strong>
         <br>
         <strong>Feedback: ${selectedRating}</strong>
-        <p>We'll use your feedback to improve EGGTech.</p>
+        <p>We'll use your feedback to improve EggTech.</p>
     `;
 
     setTimeout(() => {

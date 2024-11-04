@@ -1,6 +1,21 @@
-const toggle = document.getElementById('nav-toggle')
-const nav = document.getElementById('nav')
-
-toggle.addEventListener('click', function(){
-    nav.classList.toggle('active')
-})
+document.addEventListener('DOMContentLoaded', function () {
+    const cartCountEl = document.getElementById('cart-count');
+  
+    // Function to calculate and update cart count based on items in local storage
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+      cartCountEl.textContent = cartCount;
+    }
+  
+    // Initial update of the cart count on page load
+    updateCartCount();
+  
+    // Listen for changes in local storage and update cart count if cart changes
+    window.addEventListener('storage', (event) => {
+      if (event.key === 'cart') {
+        updateCartCount();
+      }
+    });
+  });
+  

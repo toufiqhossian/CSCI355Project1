@@ -632,51 +632,23 @@ footer .footer-decoration {
   font-size: 12px;
 }
 
-.search {
-  position: relative;
-  height: 50px;
-  width: 50px; /* Start with the width of the button */
-  overflow: hidden;
-  transition: width 0.3s ease;
-}
-
-.search .input {
-  background-color: white;
-  border: none;
-  font-size: 18px;
-  height: 50px;
-  width: 0;
-  padding: 0;
-  opacity: 0;
-  transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
-}
-
-.search .btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cart-icon {
+  position: relative; /* Set relative positioning to allow bubble positioning */
+  color: white;
+  font-size: 1.8rem;
   transition: transform 0.3s ease;
 }
 
-.search.active {
-  width: 200px; /* Expand the search container */
-}
-
-.search.active .input {
-  width: 100%;
-  padding: 0 15px;
-  opacity: 1;
-}
-
-.search.active .btn {
-  transform: translateX(150px); /* Move the button to the end */
+.cart-count {
+  background-color: #ffcb05; /* Bright yellow bubble color */
+  color: #333; /* Dark text color for contrast */
+  border-radius: 50%; /* Makes the bubble round */
+  padding: 3px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px; /* Adjust position relative to the cart icon */
+  right: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

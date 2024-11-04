@@ -1,120 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
+  <title>Contact Us | EGGTech</title>
   <link rel="stylesheet" href="contact-us.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
 <body>
-  <header> 
+
+  <!-- Navigation Header -->
+  <header>
     <div class="header-container">
-      <div class="logo-and-title">
-        <img src="\SourceFiles\CS355 Project images\EGGTech Logo.jpg" alt="EGGTech Logo" class="logo">
+      <div class="logo">
         <h1>EGGTech</h1>
       </div>
-      <nav id="nav" aria-label="Main Navigation">
-        <a href="Home.html">Home</a>
+      <nav>
+        <a href="home.html">Home</a>
         <a href="sale.html">Sale</a>
-        <a href="contact-us.html">Contact Us</a>
+        <a href="contact-us.html" class="active">Contact Us</a>
+        <a href="cart.html" class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
       </nav>
-      <div class="header-right">
-        <!-- Cart and Search Section -->
-        <div class="cart-container">
-          <a href="cart.html" class="cart-icon">
-            <i class="bi bi-cart4" aria-label="Cart Icon"></i>
-          </a>
-          <div class="cart-preview" id="cart-preview">
-            <p id="cart-message">No items in your cart.</p>
-            <div class="cart-items" id="cart-items">
-            </div>
-            <a href="cart.html" class="view-cart-btn">View Cart</a>
-          </div>
-        </div>
-
-        <div class="search">
-          <input type="text" class="input" placeholder="Search...">
-          <button class="btn">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
-      </div>
     </div>
   </header>
- 
-  <main class="contact-container">
-    <h1 class="contact-title">Contact Us</h1>
-    <p class="contact-description">We're here to help you with any inquiries or feedback!</p>
-    <form action="send_email.php" method="POST" class="contact-form">
-      <div class="form-group">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
-      </div>
-      <div class="form-group">
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
 
-    <!-- Our Locations Section -->
-    <h1 class="locations-title">Our Locations</h1>
-    <div class="locations-container">
-      <div class="panel" data-address="Located in: Galleria Dallas, Address: 13350 Dallas Pkwy, Dallas, TX 75240"
-        style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/View_of_Dallas_from_Reunion_Tower_August_2015_13.jpg/800px-View_of_Dallas_from_Reunion_Tower_August_2015_13.jpg');">
-        <h3>Dallas</h3>
-      </div>
-      <div class="panel" data-address="Address: 767 5th Ave, New York, NY 10153"
-        style="background-image: url('https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg');">
-        <h3>New York</h3>
-      </div>
-      <div class="panel" data-address="Address: 300 Post St, San Francisco, CA 94108"
-        style="background-image: url('https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg');">
-        <h3>San Francisco</h3>
-      </div>
-      <div class="panel" data-address="Address: 701 S Miami Ave, Miami, FL 33130"
-        style="background-image: url('https://static.independent.co.uk/2023/03/20/16/iStock-590299316.jpg');">
-        <h3>Miami</h3>
-      </div>
-      <div class="panel" data-address="Address: 802 S Broadway, Los Angeles, CA 90014"
-        style="background-image: url('https://laedc.org/wpcms/wp-content/uploads/2022/03/Central-LA-1.jpeg');">
-        <h3>Los Angeles</h3>
-      </div>
+  <!-- Animated Contact Banner -->
+  <section class="contact-banner">
+    <div class="banner-content">
+      <h2>Connect with EGGTech</h2>
+      <p>Your go-to tech team is just a message away!</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <main class="contact-container">
+    <div class="contact-form-section">
+      <h1 class="contact-title">Get in Touch</h1>
+      <form action="send_email.php" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </div>
 
-    <div id="location-info" class="location-info"></div>
+    <!-- Interactive Locations Section -->
+<!-- Interactive Locations Section -->
+<div class="locations-container">
+  <h2 class="locations-title">Our Locations</h2>
+  <div class="locations">
+    <div class="card">
+      <div class="card-image" style="background-image: url('/SourceFiles/CS355 Project images/dallas.jpg');"></div>
+      <div class="card-content">
+        <h3>Dallas</h3>
+        <p>Located in: Galleria Dallas, 13350 Dallas Pkwy, Dallas, TX 75240</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image" style="background-image: url('/SourceFiles/CS355 Project images/NYC.jpeg');"></div>
+      <div class="card-content">
+        <h3>New York</h3>
+        <p>767 5th Ave, New York, NY 10153</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image" style="background-image: url('/SourceFiles/CS355 Project images/SanFran.jpg');"></div>
+      <div class="card-content">
+        <h3>San Francisco</h3>
+        <p>300 Post St, San Francisco, CA 94108</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image" style="background-image: url('/SourceFiles/CS355 Project images/miami.jpg');"></div>
+      <div class="card-content">
+        <h3>Miami</h3>
+        <p>701 S Miami Ave, Miami, FL 33130</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image" style="background-image: url('/SourceFiles/CS355 Project images/LA.webp');"></div>
+      <div class="card-content">
+        <h3>Los Angeles</h3>
+        <p>802 S Broadway, Los Angeles, CA 90014</p>
+      </div>
+    </div>
+  </div>
+  <div id="location-info" class="location-info"></div>
+</div>
+
   </main>
 
+  <!-- Footer Section -->
   <footer>
-    <div class="footer-content">
-      <section>
-        <h2>Get Help</h2>
-        <ul>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="order-status.html">Order Status</a></li>
-          <li><a href="credit-card.html">EGGTech Credit Card</a></li>
-          <li><a href="returns.html">Returns</a></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Owners</h2>
-        <p>Roni Mikhaylov, Esteban Mesa, Toufiq Hossian, Jin, Hanz</p>
-      </section>
-    </div>
+    <p>&copy; 2024 EGGTech - All rights reserved.</p>
   </footer>
 
   <script src="contact-us.js"></script>
 </body>
-
 </html>

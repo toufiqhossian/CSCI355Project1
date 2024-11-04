@@ -1,13 +1,19 @@
-const toggle = document.getElementById('nav-toggle')
-const nav = document.getElementById('nav')
-const toggles = document.querySelectorAll('.faq-toggle')
+const cartCountElement = document.getElementById('cart-count');
 
-toggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-        toggle.parentNode.classList.toggle('active')
-    })
-})
+// Load cart from local storage and update cart count
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-toggle.addEventListener('click', function(){
-    nav.classList.toggle('active')
-})
+function updateCartCount() {
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCountElement.textContent = cartCount;
+}
+
+updateCartCount();
+
+// FAQ Toggle
+document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        const faq = button.parentElement;
+        faq.classList.toggle('active');
+    });
+});
