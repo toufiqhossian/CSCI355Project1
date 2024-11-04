@@ -71,6 +71,16 @@ header nav a:hover, nav .active {
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: fadeInBanner 1.5s ease-in-out;
+}
+
+@keyframes fadeInBanner {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .contact-banner h2 {
@@ -79,20 +89,10 @@ header nav a:hover, nav .active {
   animation: fadeInText 2s ease;
 }
 
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .contact-banner p {
   font-size: 1.2rem;
   margin-top: 10px;
+  animation: fadeInText 2s ease 0.5s;
 }
 
 /* Contact Form */
@@ -107,6 +107,7 @@ header nav a:hover, nav .active {
   font-size: 2.5rem;
   color: #ffcb05;
   margin-bottom: 20px;
+  animation: fadeInText 1s ease;
 }
 
 .contact-form {
@@ -116,13 +117,13 @@ header nav a:hover, nav .active {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 700px;
-  animation: fadeInUp 1.5s ease;
+  animation: slideInUp 1.5s ease;
 }
 
-@keyframes fadeInUp {
+@keyframes slideInUp {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
@@ -161,6 +162,7 @@ input:focus, textarea:focus {
   cursor: pointer;
   width: 100%;
   margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .submit-btn:hover {
@@ -187,45 +189,59 @@ input:focus, textarea:focus {
   flex-wrap: wrap;
 }
 
-/* Card Styles for Locations */
-.card {
+.card.panel {
   width: 220px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-image {
   height: 120px;
+  cursor: pointer;
   background-size: cover;
   background-position: center;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  transition: all 0.5s ease;
+  animation: fadeInCard 1s ease-in-out;
 }
 
-.card-content {
-  padding: 15px;
-  text-align: center;
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.card-content h3 {
+.card h3 {
+  margin: 0;
   font-size: 1.2rem;
-  color: #004aad;
-  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.card-content p {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.4;
+.card.panel.active {
+  width: 100%;
+  height: 300px;
+  transform: scale(1.05);
+}
+
+.location-info {
+  font-size: 1.1rem;
+  padding: 15px;
+  color: #333;
+  background-color: #ffcb05;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.location-info.show {
+  display: block;
+  opacity: 1;
 }
 
 /* Footer */
@@ -235,6 +251,7 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: 50px;
+  animation: fadeInText 1s ease-in-out;
 }
 
 footer p {
