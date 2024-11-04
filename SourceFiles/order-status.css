@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,16 +14,21 @@ body {
   overflow-x: hidden;
 }
 
+/* Header Styling */
 header {
-  background-color: white; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  padding: 15px 30px;
+  background-color: #004aad;
+  padding: 20px 50px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .logo-and-title {
@@ -31,51 +36,53 @@ header {
   align-items: center;
 }
 
-.logo-and-title .logo {
-  height: 50px; 
+.logo {
+  height: 50px;
   margin-right: 10px;
 }
 
 header h1 {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100; 
+  font-size: 2rem;
+  color: #ffffff;
   margin: 0;
 }
 
-nav#nav {
-  flex: 1;
-  text-align: center;
-}
-
-nav#nav a {
-  color: #001f3f; 
-  font-size: 16px;
-  text-decoration: none; 
-  margin: 0 15px;
+header nav a {
+  color: #ffffff;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-nav#nav a:hover {
-  color: #5290f9; 
+header nav a:hover {
+  color: #ffcb05;
 }
 
-.cart-icon {
-  color: #001f3f;
+.cart-icon, .cart {
+  color: #ffffff;
+  font-size: 1.8rem;
+  position: relative;
 }
 
-.cart-icon i {
-  font-size: 30px; 
+.cart-count {
+  background-color: #ffcb05;
+  color: #333;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -15px;
 }
 
+/* Main Container Styling */
 .container {
-  font-family: 'Muli', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 75vh;
-  overflow: hidden;
-  margin: 0;
   padding: 20px 40px;
   border-radius: 5px;
 }
@@ -85,6 +92,7 @@ nav#nav a:hover {
   margin-bottom: 30px;
 }
 
+/* Button Styling */
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -95,9 +103,11 @@ nav#nav a:hover {
   font-size: 16px;
   border: 0;
   border-radius: 5px;
+  color: #ffffff;
+  transition: background 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
   background: #3e69e0;
 }
 
@@ -109,10 +119,7 @@ nav#nav a:hover {
   transform: scale(0.98);
 }
 
-.text {
-  margin-top: 30px;
-}
-
+/* Form Control Styling */
 .form-control {
   position: relative;
   margin: 20px 0 40px;
@@ -122,14 +129,12 @@ nav#nav a:hover {
 .form-control input {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px black solid;
+  border-bottom: 2px solid #333;
   display: block;
   width: 100%;
   padding: 15px 0;
   font-size: 18px;
-  color: wh;
-  position: relative;
-  z-index: 100;
+  color: #333;
 }
 
 .form-control input:focus,
@@ -158,42 +163,64 @@ nav#nav a:hover {
   transform: translateY(-30px);
 }
 
+/* Footer Styling */
 footer {
-  background-color: #001f3f; 
+  background-color: #004aad;
   color: white;
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
-}
-
-footer h2 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 .footer-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  flex-wrap: wrap;
 }
 
-.footer-content section {
-  margin-bottom: 20px;
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
 }
 
-.footer-content ul {
+.footer-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffcb05;
+  font-weight: 600;
+}
+
+.footer-section ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-content ul li {
+.footer-section ul li {
   margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffcb05;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
 }
